@@ -127,14 +127,40 @@ input[type="checkbox"] {
 /* -------------- */
 .main{
     width:100%;
-    height:100vh;
+    height: 100vh;
+    background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
 }
-h1 {
-    text-align: center;
-    margin-top: 20px;
+.text h1 {
+    color:var(--gri);
     margin-bottom: 20px;
 }
+.text p{
+    color:var(--gri);
+}
+.text a{
+   text-decoration:none;
+   color:var(--gri);
+}
+.text #mainBtn{
+    display:block;
+    margin-top:20px;
+    border-radius: 5px;
+    background-color:var(--turcoaz);
+    padding:16px 32px;
+    width:60%;
+    cursor:pointer;
+}
+.text #mainBtn:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
+  }
+.text{
+    width:60%;
+    position:absolute;
+     top: 50%;
+     left: 35%;
+     transform: translate(-50%, -50%);
+}
 /*---Footer---*/
 .footer {
     padding: 40px 0;
