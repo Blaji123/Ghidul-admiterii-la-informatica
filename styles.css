@@ -125,7 +125,8 @@ input[type="checkbox"] {
 }
 
 /* -------------- */
-.main{
+/* --Acasa main-- */
+.main-acasa{
     width:100%;
     height: 100vh;
     background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
@@ -243,6 +244,41 @@ a.mainBtn {
     from {opacity: .4}
     to {opacity: 1}
   }
+/*------------*/
+/*----main materie---*/
+ .main-materie{
+    display: flex;
+    flex-wrap: wrap;
+    background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+    width:100%;
+    flex-direction: column;
+ }
+ .main-materie .section1{
+    margin-top:0;
+ }
+ .main-materie section{
+    margin-left:15px;
+    margin-top:20px;
+    margin-bottom:20px;
+ }
+ .main-materie ul{
+    display:flex;
+    margin-left:30px;
+    flex-direction:column;
+    align-content:space-between;
+ }
+ .main-materie h2{
+    color:var(--gri);
+ }
+ .main-materie li a{
+    text-decoration: none;
+    color:var(--albastru);
+ }
+ .main-materie li{
+    list-style: none;
+    margin:15px 0;
+ }
+/*-------------------*/
 /*---Footer---*/
 .footer {
     padding: 40px 0;
@@ -298,3 +334,4 @@ a.mainBtn {
 .footer ul a:hover {
     opacity: 1;
 }
+/*-------------*/
