@@ -179,6 +179,10 @@ a.mainBtn {
     transform:translate(0%,-50%);
   }
   
+  .mySlides:first-of-type {
+      display: block;
+   }
+
   .mySlides {
     display: none;
   }
