@@ -178,6 +178,10 @@ a.mainBtn {
     right:5%;
     transform:translate(0%,-50%);
   }
+
+ .mySlides {
+    display: none;
+  }
   
   .prev, .next {
     cursor: pointer;
