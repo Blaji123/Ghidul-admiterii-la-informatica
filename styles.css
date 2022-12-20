@@ -12,6 +12,7 @@
     --turcoaz: #256D85;
     --albastru: #47B5FF;
     --gri: #DFF6FF;
+    --gri-deschis:#74797a;
 }
 
 /* ----NAVBAR---- */
@@ -303,8 +304,21 @@ a.mainBtn {
     flex-direction: column;
     background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
     width:100%;
+    color:var(--gri-deschis);
   }
-  
+  .tipuri-main{
+    margin-top:30px;
+    margin-left:30px;
+  }
+  .tipuri-body .tipuri-main ol li{
+    margin-left:200px;
+  }
+  .tipuri-body .tipuri-main ol ul li{
+    margin-left:100px;
+  }
+  .tipuri-body .tipuri-main li{
+    margin-left:100px;
+  }
 /*-------------------*/
 /*---Footer---*/
 .footer {

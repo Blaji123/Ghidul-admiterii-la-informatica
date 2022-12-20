@@ -38,9 +38,80 @@
                         <ul>
                             <li>Tipul int</li>
                             <li>Tipurile float și double</li>
+                            <li>Tipul char</li>
+                            <li>Tipul pointer</li>
+                            <li>Tipul bool</li>
+                            <li>Tipul void</li>
+                        </ul>
+                    <li>Tipuri derivate</li>
+                        <ul>
+                            <li>Tipul tablou</li>
+                            <li>Tipul structură/clasa</li>
+                            <li>Tipul enumerare</li>
                         </ul>
                 </ol>
-             </div>
+             <h2>Tipul int</h2>
+               <ul>
+                  <li>permite memorarea de valori întregi – pozitive sau negative;</li>
+                  <li>o dată de tip int ocupă (de regulă) 4 octeți; astfel, 
+                    poate memora valori întregi din [-2<sup>31</sup>,-2<sup>31</sup> - 1], 
+                    adică [−2.147.483.648,2.147.483.647].</li>
+               </ul>
+               <h2>Tipul float si double</h2>
+                  <ul>
+                    <li>memorează numere reale;</li>
+                    <li>separatorul zecimal este punctul</li>
+                    <li>se mai numesc tipuri în virgulă mobilă;</li>
+                    <li>datele reale pot fi date în forma fixă sau în forma științifică (exponențială);</li>
+                    <li>tipul float se reprezinta pe 4 octeți;</li>
+                    <li>tipul double se reprezinta pe 8 octeți;</li>
+                  </ul>
+                <textarea>
+                    float p = 3.14, r = 2.5;
+                    double A = p * r * r;
+                    double x = 1.24E+07; // înseamnă 1.24 * 10^7
+                </textarea>
+                <h2>Tipul char</h2>
+                <ul>
+                  <li>se folosește pentru caractere ASCII</li>
+                  <li>stochează un singur caracter</li>
+                  <li>se reprezintă pe 1 octet</li>
+                  <li>caracterele sunt delimitate prin apostrof</li>
+                </ul>
+                <h2>Tipul pointer</h2>
+                    <ul>
+                      <li>o dată de tip pointer memorează o adresă de memorie – de exemplu adresa unei variabile;
+                        Informații despre pointeri găsiți în acest articol.</li>
+                    </ul>
+             <h2>Tipul bool</h2>
+             <p>Anumite operații care se fac cu datele au ca rezultat valori de adevăr: adevărat sau false.</p>
+             <ul>
+                <li>tipul bool conține două valori: true și false ;</li>
+                <li>se reprezintă (de regulă) pe 1 octet;</li>
+                <li>valorile numerice ale lor sunt 1 și 0;</li>
+                <li>se folosesc în instrucțiuni condiționale și repetitive</li>
+             </ul>
+             <h2>Tipul void</h2>
+             <ul>
+                <li>cuvântul void înseamnă “nimic” sau “fără valoare”;</li>
+                <li>datele de tip void nu au valori și nu se pot face cu ele operații;</li>
+                <li>îl folosim pentru funcții și pointeri</li>
+             </ul>
+             <h2>Modificatori de tip</h2>
+             <p>Permit schimbarea modului în care se face reprezentarea internă a unei date. Aceștia sunt:</p>
+                <ul>
+                  <li>signed</li>
+                  <li>unsigned</li>
+                  <li>short</li>
+                  <li>long</li>
+                </ul>
+              <p>Pot fi aplicați tipurilor</p>
+                <ul>
+                  <li>int</li>
+                  <li>double</li>
+                  <li>char</li>
+                </ul>
+            </div>
          </div>
       <!---------------------->
       <!-------Footer--------->
