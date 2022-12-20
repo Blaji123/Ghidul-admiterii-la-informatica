@@ -179,9 +179,10 @@ a.mainBtn {
     transform:translate(0%,-50%);
   }
 
- .mySlides {
+ 
+  .mySlides {
     display: none;
-  }
+   }
   
   .prev, .next {
     cursor: pointer;
