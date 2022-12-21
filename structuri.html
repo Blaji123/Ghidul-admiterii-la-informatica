@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/> 
+    <title>Structuri repetitive</title>
+</head>
+<body>
+     <!------- NAVBAR -------->
+     <nav>
+        <div class="logo">
+          <img src="download-removebg-preview.png" class="sigla">
+         </div>
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="despre.html">Despre</a></li>
+              <li><a class="active" href="materie.html">Materie</a></li>
+              <li><a href="probleme.html">Probleme</a></li>
+          </ul>
+      </nav>
+      <!---------------------->
+      <!--------main---------->
+         <div class="structuri-body">
+            <div class="structuri-main">
+                <p style="margin-top:-15px">Structurile repetitive execută o instrucțiune de mai multe ori. Se mai numesc și bucle sau cicluri.</p>
+                <p>Structurile repetitive pot fi:</p>
+                <ul>
+                    <li>cu număr cunoscut de pași (iterații) – se cunoaște de la început de câte ori se va execută instrucțiunea</li>
+                    <li>cu număr necunoscut de pași (iterații). Instrucțiunea se execută cât timp o condiție este adevărată. 
+                    La fiecare pas se va evalua condiția, <br>iar dacă aceasta este adevărată se va executa instrucțiunea.</li>
+                </ul>
+                <p>Structurile repetitive cu număr necunoscut de pași pot fi:</p>
+                <ul>
+                    <li>cu test inițial: mai întâi se evaluează condiția; dacă este adevărată se execută instrucțiunea și procesul se reia.</li>
+                    <li>cu test final: mai întâi se execută instrucțiunea, apoi se evaluează condiția; Dacă este adevărată, procesul se reia.</li>
+                </ul>
+                <p>Instrucțiunea care se execută în mod repetat poartă numele de corp al structurii repetitive, 
+                corp al ciclului, corp al buclei și de foarte multe ori este o instrucțiune compusă,<br> care conține alte instrucțiuni.</p>
+                <p>În C/C++, instrucțiunile repetitive sunt:</p>
+                <ul>
+                    <li>while – reprezintă o structură repetitivă cu număr necunoscut de pași și test inițial;</li>
+                    <li>do...while – reprezintă o structură repetitivă cu număr necunoscut de pași și test final;</li>
+                    <li>for – reprezintă de o structură repetitivă cu număr necunoscut de pași și test inițial; se folosește 
+                    frecvent când se cunoaște numărul de pași. 
+                    <br>Putem spune că structura rerepetitivă cu număr cunoscut de pași se implementează în C/C++ prin intermediul său!</li>
+                <p>Există de asemenea două instrucțiuni care controlează execuția structurilor repetitive:</p>
+                <li>break – întrerupe execuția structurii repetitive curente;</li>
+                <li style="margin-bottom:50px">continue – la întâlnirea ei execuția programului trece la expresiile care controlează 
+                structura repetitivă curentă, ignorând instrucțiunile care îi urmează în corpul ciclului.</li>
+                </ul>
+            </div>
+         </div>
+      <!---------------------->
+      <!-------Footer--------->
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
+            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <ul class="list">
+            <li>
+              <a href="index.html">Acasă</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="despre.html">Despre</a>
+            </li>
+          </ul>
+    </div>
+    <!----------------------->
+</body>
+</html>

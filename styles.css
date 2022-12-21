@@ -13,6 +13,7 @@
     --albastru: #47B5FF;
     --gri: #DFF6FF;
     --gri-deschis:#74797a;
+    --gri-inchis:#b4aea1;
 }
 
 /* ----NAVBAR---- */
@@ -298,8 +299,8 @@ a.mainBtn {
     margin:0;
  }
 /*-------------------*/
-/*----main-tipuri----*/
-  .tipuri-body{
+/*----main pagini materie----*/
+  .tipuri-body,.variabile-body,.structuri-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -307,18 +308,62 @@ a.mainBtn {
     width:100%;
     color:var(--gri-deschis);
   }
-  .tipuri-main{
-    margin-top:30px;
+  .tipuri-body .tipuri-main h2,.variabile-body .variabile-main h2{
+    color:var(--gri-inchis);
+    line-height: 1.2;
+    font-weight: 500;
+    font-family: Verdana,sans-serif;
+    letter-spacing: 1px;
+    font-size:23x;
+    margin-top:20px;
+    margin-bottom:20px;
+  }
+  .tipuri-main,.variabile-main,.structuri-main{
+    margin-top:50px;
     margin-left:30px;
   }
   .tipuri-body .tipuri-main ol li{
-    margin-left:200px;
+    margin-left:50px;
+    font-weight:600;
+    font-size:15px;
   }
   .tipuri-body .tipuri-main ol ul li{
     margin-left:100px;
   }
-  .tipuri-body .tipuri-main li{
+  .variabile-body .variabile-main ul ul li{
     margin-left:100px;
+  }
+  .tipuri-body .tipuri-main ul li,.variabile-body .variabile-main ul li,.structuri-body .structuri-main ul li{
+    margin-left:52px;
+    font-weight:600;
+    font-size:15px;
+  }
+  .tipuri-body .tipuri-main p,.variabile-body .variabile-main p{
+    font-weight:600;
+    font-size:15px;
+  }
+  .structuri-body .structuri-main p{
+    font-weight:600;
+    font-size:15px;
+    margin-top:15px;
+    margin-bottom:15px;
+  }
+  .tipuri-body .tipuri-main textarea{
+    border-radius:5px;
+    background-color: var(--main);
+    color:var(--gri-deschis);
+    margin-top:25px;
+    line-height:1.5;
+    border:1px solid var(--albastru);
+    padding-top:4.7px;
+  }
+  .variabile-body .variabile-main textarea{
+    border-radius:5px;
+    background-color: var(--main);
+    color:var(--gri-deschis);
+    margin-top:5px;
+    line-height:1.5;
+    border:1px solid var(--albastru);
   }
 /*-------------------*/
 /*---Footer---*/
