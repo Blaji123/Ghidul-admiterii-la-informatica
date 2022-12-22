@@ -180,9 +180,7 @@ a.mainBtn {
     right:5%;
     transform:translate(0%,-50%);
   }
-
- 
-  .mySlides {
+   .mySlides {
     display: none;
    }
   
@@ -365,6 +363,41 @@ a.mainBtn {
     line-height:1.5;
     border:1px solid var(--albastru);
   }
+  code {
+    padding: 2px 4px;
+    font-size: 90%;
+    color: #c7254e;
+    background-color: #f9f2f4;
+    border-radius: 4px;
+    padding-left: 0;
+    padding-right: 0;
+    font-family: monospace!important;
+    white-space: pre;
+}
+.descriere_sintaxa {
+  white-space: break-spaces!important;
+  font-family: monospace!important;
+  border: solid 1px gray!important;
+  border-radius: 4px;
+  background-color: #ccc;
+  padding: 5px 10px;
+}
+.descriere_sintaxa code {
+  background: 0 0;
+}
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 1.42857143;
+  color: #333;
+  word-break: break-all;
+  word-wrap: break-word;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 /*-------------------*/
 /*---Footer---*/
 .footer {

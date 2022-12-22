@@ -21,8 +21,8 @@
           <ul>
               <li><a href="index.html">Acasă</a></li>
               <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Materie</a></li>
-              <li><a href="probleme.html">Probleme</a></li>
+              <li><a class="active" href="materie.html">Programă</a></li>
+              <li><a href="probleme.html">Subiecte</a></li>
           </ul>
       </nav>
       <!---------------------->
@@ -38,12 +38,12 @@
                 <ol>
                     <li>Tipuri simple</li>
                         <ul>
-                            <li>Tipul int</li>
-                            <li>Tipurile float și double</li>
-                            <li>Tipul char</li>
+                            <li>Tipul <code>int</code></li>
+                            <li>Tipurile <code>float</code> și <code>double</code></li>
+                            <li>Tipul <code>char</code></li>
                             <li>Tipul pointer</li>
-                            <li>Tipul bool</li>
-                            <li>Tipul void</li>
+                            <li>Tipul <code>bool</code></li>
+                            <li>Tipul <code>void</code></li>
                         </ul>
                     <li>Tipuri derivate</li>
                         <ul>
@@ -55,7 +55,7 @@
              <h2>Tipul int</h2>
                <ul>
                   <li>permite memorarea de valori întregi – pozitive sau negative;</li>
-                  <li>o dată de tip int ocupă (de regulă) 4 octeți; astfel, 
+                  <li>o dată de tip <code>int</code> ocupă (de regulă) 4 octeți; astfel, 
                     poate memora valori întregi din [-2<sup>31</sup>,-2<sup>31</sup> - 1], 
                     adică [−2.147.483.648,2.147.483.647].</li>
                </ul>
@@ -65,19 +65,22 @@
                     <li>separatorul zecimal este punctul</li>
                     <li>se mai numesc tipuri în virgulă mobilă;</li>
                     <li>datele reale pot fi date în forma fixă sau în forma științifică (exponențială);</li>
-                    <li>tipul float se reprezinta pe 4 octeți;</li>
-                    <li>tipul double se reprezinta pe 8 octeți;</li>
+                    <li>tipul <code>float</code> se reprezinta pe <code>4</code> octeți;</li>
+                    <li>tipul <code>double</code> se reprezinta pe <code>8</code> octeți;</li>
                   </ul>
-                <textarea rows="4" cols="80">
-                    float p = 3.14, r = 2.5;
-                    double A = p * r * r;
-                    double x = 1.24E+07; // înseamnă 1.24 * 10^7
-                </textarea>
+                  <pre class="code_cpp cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true">
+                  <span class="cm-keyword">float</span> <span class="cm-variable">p</span> 
+                  <span class="cm-operator">=</span>  
+                  <span class="cm-number">3.14</span>, <span class="cm-variable">r</span> 
+                  <span class="cm-operator">=</span> <span class="cm-number">2.5</span>;
+                  <span class="cm-keyword">double</span> <span class="cm-variable">A</span> 
+                  <span class="cm-operator">=</span> <span class="cm-variable">p</span> <span class="cm-operator">*</span> 
+                  <span class="cm-variable">r</span> <span class="cm-operator">*</span> <span class="cm-variable">r</span>;</pre>
                 <h2>Tipul char</h2>
                 <ul>
                   <li>se folosește pentru caractere ASCII</li>
                   <li>stochează un singur caracter</li>
-                  <li>se reprezintă pe 1 octet</li>
+                  <li>se reprezintă pe <code>1</code> octet</li>
                   <li>caracterele sunt delimitate prin apostrof</li>
                 </ul>
                 <h2>Tipul pointer</h2>
@@ -89,33 +92,33 @@
              <p>Anumite operații care se fac cu datele au ca rezultat valori de adevăr: adevărat sau false.</p>
              <br>
              <ul>
-                <li>tipul bool conține două valori: true și false ;</li>
-                <li>se reprezintă (de regulă) pe 1 octet;</li>
-                <li>valorile numerice ale lor sunt 1 și 0;</li>
+                <li>tipul <code>bool</code> conține două valori: <code>true</code> și <code>false</code> ;</li>
+                <li>se reprezintă (de regulă) pe <code>1</code> octet;</li>
+                <li>valorile numerice ale lor sunt <code>1</code> și <code>0</code>;</li>
                 <li>se folosesc în instrucțiuni condiționale și repetitive</li>
              </ul>
              <h2>Tipul void</h2>
              <ul>
                 <li>cuvântul void înseamnă “nimic” sau “fără valoare”;</li>
-                <li>datele de tip void nu au valori și nu se pot face cu ele operații;</li>
+                <li>datele de tip <code>void</code> nu au valori și nu se pot face cu ele operații;</li>
                 <li>îl folosim pentru funcții și pointeri</li>
              </ul>
              <h2>Modificatori de tip</h2>
              <p>Permit schimbarea modului în care se face reprezentarea internă a unei date. Aceștia sunt:</p>
              <br>
                 <ul>
-                  <li>signed</li>
-                  <li>unsigned</li>
-                  <li>short</li>
-                  <li>long</li>
+                  <li><code>signed</code></li>
+                  <li><code>unsigned</code></li>
+                  <li><code>short</code></li>
+                  <li><code>long</code></li>
                   <br>
                 </ul>
               <p>Pot fi aplicați tipurilor</p>
               <br>
                 <ul>
-                  <li>int</li>
-                  <li>double</li>
-                  <li style="margin-bottom:50px">char</li>
+                  <li><code>int</code></li>
+                  <li><code>double</code></li>
+                  <li style="margin-bottom:50px"><code>char</code></li>
                 </ul>
             </div>
          </div>

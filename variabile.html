@@ -21,8 +21,8 @@
           <ul>
               <li><a href="index.html">Acasă</a></li>
               <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Materie</a></li>
-              <li><a href="probleme.html">Probleme</a></li>
+              <li><a class="active" href="materie.html">Programă</a></li>
+              <li><a href="probleme.html">Subiecte</a></li>
           </ul>
       </nav>
       <!---------------------->
@@ -39,36 +39,40 @@
           <ul>
              <li><b>adresa variabilei</b>. Memoria RAM a calculatorului este adresată – fiecare octet (byte) 
                 din memorie are asociat un număr de ordine, 
-                începând de la 0.<br> Acest număr reprezintă adresa acelui byte și se afișează implicit în baza 16.</li>
+                începând de la 0.<br> Acest număr reprezintă adresa acelui byte și se afișează implicit în baza <code>16</code>.</li>
              <li><b>identificatorul variabilei</b> – reprezintă un nume pentru variabilă – 
                 legătura dintre variabilă si adresa ei. Identificatorul respectă următoarele reguli:</li>
             <ul>
-                <li>conține litere mari, mici ale alfabetului englez cifre și caracterul de subliniere '_' – underline. 
-                Literele mari sunt considerate diferite de cele mici astfel că Raspuns, raspuns și <br>RASPUNS 
+                <li>conține litere mari, mici ale alfabetului englez cifre și caracterul de subliniere <code>'_'</code> – underline. 
+                Literele mari sunt considerate diferite de cele mici astfel că <code>Raspuns</code>, <code>raspuns</code> și <br>
+                <code>RASPUNS</code> 
                 reprezintă identificatori diferiți.</li>
                 <li>primul caracter nu poate fi cifră. Deși este posibil ca un identificator 
-                să înceapă cu '_', nu este recomandat, pentru a evita anumite conflicte cu identificatori de sistem.</li>
+                să înceapă cu <code>'_'</code>, nu este recomandat, pentru a evita anumite conflicte cu identificatori de sistem.</li>
                 <li>identificatorul nu poate face parte din lista cuvintelor rezervate – disponibilă la finalul acestui articol.</li>
-                <li>nu există limite legate de lungimea unui identificator, dar numai primele 31 de caractere sunt semnificative.</li>
+                <li>nu există limite legate de lungimea unui identificator, dar numai primele <code>31</code> de caractere sunt semnificative.</li>
             </ul>
             <li><b>tipul variabilei</b> – stabilește ce fel de valori poate să ia variabila, 
             între ce limite sunt acestea, precum și ce operații pot fi realizate cu variabila</li>
             <li><b>domeniul de vizibilitate</b> – reprezintă zona din program 
             în care variabila există și poate fi utilizată. Variabilele pot fi globale sau locale.</li>
               <ul>
-                <li>variabilele locale se declară într-un bloc (între paranteze acolade {...}) 
+                <li>variabilele locale se declară într-un bloc (între paranteze acolade <code>{...}</code>) 
                 și sunt vizibile doar în acel bloc. Au valori inițiale aleatorii.</li>
                 <li>variabilele globale se declară în exteriorul oricărui bloc și 
-                sunt vizibile în toate blocurile care urmează declarării. Sunt inițializate cu 0.</li>
+                sunt vizibile în toate blocurile care urmează declarării. Sunt inițializate cu <code>0</code>.</li>
               </ul>
             <h2>Constante simbolice</h2>
                <p style="margin-bottom:10px">Constantele simbolice (cu nume) pot fi precizate în două moduri:</p>
                <ul>
-                <li style="margin-bottom:5px">prin directiva define. Exemplu:</li>
-               <textarea rows="1" cols="80">#define MAX 101</textarea>
-                <li style="margin-bottom:5px">se pot declara variabile cu modificatorul const; ele devin read-only, 
+                <li style="margin-bottom:5px">prin directiva <code>define</code>. Exemplu:</li>
+                <pre class="code_cpp cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true">
+                <span class="cm-meta">#define MAX 101</span></pre>
+                <li style="margin-bottom:5px">se pot declara variabile cu modificatorul <code>const</code>; ele devin read-only, 
                 iar valoarea lor nu mai poate fi modificată. Exemplu:</li>
-                <textarea rows="1" cols="80" style="margin-bottom:50px">const int MAX = 101;</textarea>
+                <pre class="code_cpp cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true">
+                <span class="cm-keyword">const</span> <span class="cm-keyword">int</span> <span class="cm-variable">MAX</span>
+                <span class="cm-operator">=</span> <span class="cm-number" style="margin-bottom:50px">101</span>;</pre>
                </ul>
           </ul>
          </div>
