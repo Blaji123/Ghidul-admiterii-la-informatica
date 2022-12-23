@@ -298,7 +298,8 @@ a.mainBtn {
  }
 /*-------------------*/
 /*----main pagini materie----*/
-  .tipuri-body,.variabile-body,.structuri-body{
+  .tipuri-body,.variabile-body,.structuri-body,.while-body,.do_while-body,.for-body,.interschimbare-body,.descompunere-body,
+  .verificare-body,.binara-body,.interclasare-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -306,7 +307,9 @@ a.mainBtn {
     width:100%;
     color:var(--gri-deschis);
   }
-  .tipuri-body .tipuri-main h2,.variabile-body .variabile-main h2{
+  .tipuri-body .tipuri-main h2,.variabile-body .variabile-main h2,.while-body .while-main h2,.do_while-body .do_while-main h2,
+  .for-body .for-main h2,.interschimbare-body .interschimbare-main h2,.descompunere-body .descompunere-main h2,
+  .verificare-body .verificare-main h2,.binara-body .binara-main h2,.interclasare-body .interclasare-main h2{
     color:var(--gri-inchis);
     line-height: 1.2;
     font-weight: 500;
@@ -316,27 +319,33 @@ a.mainBtn {
     margin-top:20px;
     margin-bottom:20px;
   }
-  .tipuri-main,.variabile-main,.structuri-main{
+  .tipuri-main,.variabile-main,.structuri-main,.while-main,.do_while-main,.for-main,.interschimbare-main,.descompunere-main,
+  .verificare-main,.binara-main,.interclasare-main{
     margin-top:50px;
     margin-left:30px;
   }
-  .tipuri-body .tipuri-main ol li{
+  .tipuri-body .tipuri-main ol li,.while-body .while-main ol li,.do_while-body .do_while-main ol li,.for-body .for-main ol li{
     margin-left:50px;
     font-weight:600;
     font-size:15px;
   }
-  .tipuri-body .tipuri-main ol ul li{
+  .tipuri-body .tipuri-main ol ul li,.while-body .while-main ol ul li,.for-body .for-main ol ul li{
     margin-left:100px;
   }
-  .variabile-body .variabile-main ul ul li{
+  .variabile-body .variabile-main ul ul li,.interclasare-body .interclasare-main ul ul li{
     margin-left:100px;
   }
-  .tipuri-body .tipuri-main ul li,.variabile-body .variabile-main ul li,.structuri-body .structuri-main ul li{
+  .tipuri-body .tipuri-main ul li,.variabile-body .variabile-main ul li,
+  .structuri-body .structuri-main ul li,.while-body .while-main ul li,
+  .do_while-body .do_while-main ul li,.for-body .for-main ul li,.descompunere-body .descompunere-main ul li,
+  .verificare-body .verificare-main ul li,.binara-body .binara-main ul li,.interclasare-body .interclasare-main ul li{
     margin-left:52px;
     font-weight:600;
     font-size:15px;
   }
-  .tipuri-body .tipuri-main p,.variabile-body .variabile-main p{
+  .tipuri-body .tipuri-main p,.variabile-body .variabile-main p,.while-body .while-main p,.do_while-body .do_while-main p,
+  .for-body .for-main p,.interschimbare-body .interschimbare-main p,.descompunere-body .descompunere-main p,
+  .verificare-body .verificare-main p,.binara-body .binara-main p,.interclasare-body .interclasare-main p{
     font-weight:600;
     font-size:15px;
   }
@@ -346,28 +355,11 @@ a.mainBtn {
     margin-top:15px;
     margin-bottom:15px;
   }
-  .tipuri-body .tipuri-main textarea{
-    border-radius:5px;
-    background-color: var(--main);
-    color:var(--gri-deschis);
-    margin-top:25px;
-    line-height:1.5;
-    border:1px solid var(--albastru);
-    padding-top:4.7px;
-  }
-  .variabile-body .variabile-main textarea{
-    border-radius:5px;
-    background-color: var(--main);
-    color:var(--gri-deschis);
-    margin-top:5px;
-    line-height:1.5;
-    border:1px solid var(--albastru);
-  }
   code {
     padding: 2px 4px;
     font-size: 90%;
     color: #c7254e;
-    background-color: #f9f2f4;
+    background-color: #FF69B4;
     border-radius: 4px;
     padding-left: 0;
     padding-right: 0;
@@ -381,14 +373,20 @@ a.mainBtn {
   border-radius: 4px;
   background-color: #ccc;
   padding: 5px 10px;
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .descriere_sintaxa code {
   background: 0 0;
 }
 pre {
+  width:60%;
+  margin-left:auto;
+  margin-right:auto;
   display: block;
+  margin-top:20px;
   padding: 9.5px;
-  margin: 0 0 10px;
   font-size: 13px;
   line-height: 1.42857143;
   color: #333;
@@ -397,6 +395,67 @@ pre {
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 4px;
+}
+.while-img,.do_while-img,.for-img,.verificare-img,.interclasare-img{
+  text-align: center;
+  margin-top:20px;
+}
+.for-p{
+  margin-top:20px;
+  margin-bottom:20px;
+}
+.info {
+  width:60%;
+  padding: 9px 20px 9px 20px;
+  border-style: solid;
+  border-width: 1px 1px 1px 4px;
+  border-color: #428bca;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  margin-top:20px;
+}
+.info::before {
+  display: inline-block;
+  vertical-align: middle;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  margin: 0 20px 0 0;
+  -webkit-font-smoothing: antialiased;
+  color: #428bca;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 24pt;
+  content: "\f05a";
+}
+.MathJax {
+  display: inline;
+  font-style: normal;
+  font-weight: normal;
+  line-height: normal;
+  font-size: 100%;
+  text-indent: 0;
+  text-align: left;
+  text-transform: none;
+  letter-spacing: normal;
+  word-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  float: none;
+  direction: ltr;
+  max-width: none;
+  max-height: none;
+  min-width: 0;
+  min-height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  color: #c7254e;
+}
+script {
+  display: none;
 }
 /*-------------------*/
 /*---Footer---*/

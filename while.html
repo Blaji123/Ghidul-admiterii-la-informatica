@@ -38,24 +38,24 @@
                  <h2>Mod de execuție</h2>
                  <ol>
                     <li>Se evaluează <code>Expresie</code>, iar rezultatul se convertește la <code>bool</code></li>
-                    <li>Dacă rezultatul este<code>true</code></li>
+                    <li>Dacă rezultatul este <code>true</code></li>
                       <ul>
-                        <li>Se execută<code>Instructiune</code></li>
+                        <li>Se execută <code>Instructiune</code></li>
                         <li>Se reia pasul 1.</li>
                       </ul>
-                    <li>Dacă rezultatul este <code>false</code>,se trece la instrucțiunea de după <code>while</code>.</li>
+                    <li>Dacă rezultatul este <code>false</code>, se trece la instrucțiunea de după <code>while</code>.</li>
                  </ol>
-                 <p style="text-align:center">
+                 <p class="while-img">
                      <img src="instructiunea-while.png">
                 </p>
                 <h2>Observații</h2>
                 <ul>
-                  <li><code>Instructiune</code>se execută cât timp<code>Expresie</code>este<code>true</code>-condiție adevărată</li>
-                  <li>Dacă<code> Expresie</code>este de început<code>false, Instructiune</code>nu se execută deloc.</li>
+                  <li><code>Instructiune</code> se execută cât timp <code>Expresie</code> este <code>true</code>-condiție adevărată</li>
+                  <li>Dacă <code>Expresie</code> este de început <code>false</code>, <code>Instructiune</code> nu se execută deloc.</li>
                   <li><code>Instructiune</code> poate fi orice fel de instrucțiune, dar una singură. 
                   Dacă sunt necesare mai multe instrucțiuni, se va folosi instrucțiunea compusă.</li>
-                  <li>Este necesar ca cel puțin o variabilă care apare în<code>Expresie</code>să-și modifice valoarea în<code>
-                  Instructiune</code>.Altfel se obține o<strong>buclă infinită.</strong></li>
+                  <li>Este necesar ca cel puțin o variabilă care apare în <code>Expresie</code> să-și modifice valoarea în 
+                  <code>Instructiune</code>.Altfel se obține o <strong>buclă infinită.</strong></li>
                 </ul>
                 <h2>Exemplu</h2>
                 <p>Următorul program citește valoarea variabilei n și calculează suma primelor n numere naturale. 
@@ -76,6 +76,7 @@
                       <span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">S</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;
                       <span class="cm-keyword">return</span> <span class="cm-number">0</span>;
                   }</pre>
+                  <div style="margin-bottom:50px"></div>
             </div>
           </div>
       <!---------------------->
