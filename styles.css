@@ -299,7 +299,7 @@ a.mainBtn {
 /*-------------------*/
 /*----main pagini materie----*/
   .tipuri-body,.variabile-body,.structuri-body,.while-body,.do_while-body,.for-body,.interschimbare-body,.descompunere-body,
-  .verificare-body,.binara-body,.interclasare-body{
+  .verificare-body,.binara-body,.interclasare-body,.recursivitate-body,.divide-body,.backtracking-body,.greedy-body{
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -309,7 +309,9 @@ a.mainBtn {
   }
   .tipuri-body .tipuri-main h2,.variabile-body .variabile-main h2,.while-body .while-main h2,.do_while-body .do_while-main h2,
   .for-body .for-main h2,.interschimbare-body .interschimbare-main h2,.descompunere-body .descompunere-main h2,
-  .verificare-body .verificare-main h2,.binara-body .binara-main h2,.interclasare-body .interclasare-main h2{
+  .verificare-body .verificare-main h2,.binara-body .binara-main h2,.interclasare-body .interclasare-main h2,
+  .recursivitate-body .recursivitate-main h2,.divide-body .divide-main h2,.backtracking-body .backtracking-main h2,
+  .greedy-body .greedy-main h2{
     color:var(--gri-inchis);
     line-height: 1.2;
     font-weight: 500;
@@ -320,7 +322,7 @@ a.mainBtn {
     margin-bottom:20px;
   }
   .tipuri-main,.variabile-main,.structuri-main,.while-main,.do_while-main,.for-main,.interschimbare-main,.descompunere-main,
-  .verificare-main,.binara-main,.interclasare-main{
+  .verificare-main,.binara-main,.interclasare-main,.recursivitate-main,.divide-main,.backtracking-main,.greedy-main{
     margin-top:50px;
     margin-left:30px;
   }
@@ -332,20 +334,28 @@ a.mainBtn {
   .tipuri-body .tipuri-main ol ul li,.while-body .while-main ol ul li,.for-body .for-main ol ul li{
     margin-left:100px;
   }
-  .variabile-body .variabile-main ul ul li,.interclasare-body .interclasare-main ul ul li{
+  .variabile-body .variabile-main ul ul li,.interclasare-body .interclasare-main ul ul li,
+  .backtracking-body .backtracking-main ul ul li,.greedy-body .greedy-main ul ul li{
     margin-left:100px;
   }
   .tipuri-body .tipuri-main ul li,.variabile-body .variabile-main ul li,
   .structuri-body .structuri-main ul li,.while-body .while-main ul li,
   .do_while-body .do_while-main ul li,.for-body .for-main ul li,.descompunere-body .descompunere-main ul li,
-  .verificare-body .verificare-main ul li,.binara-body .binara-main ul li,.interclasare-body .interclasare-main ul li{
+  .verificare-body .verificare-main ul li,.binara-body .binara-main ul li,.interclasare-body .interclasare-main ul li,
+  .recursivitate-body .recursivitate-main ul li,.divide-body .divide-main ul li,.backtracking-body .backtracking-main ul li,
+  .greedy-body .greedy-main ul li{
     margin-left:52px;
     font-weight:600;
     font-size:15px;
   }
+  .backtracking-body .backtracking-main ul ul ul li{
+    margin-left:150px;
+  }
   .tipuri-body .tipuri-main p,.variabile-body .variabile-main p,.while-body .while-main p,.do_while-body .do_while-main p,
   .for-body .for-main p,.interschimbare-body .interschimbare-main p,.descompunere-body .descompunere-main p,
-  .verificare-body .verificare-main p,.binara-body .binara-main p,.interclasare-body .interclasare-main p{
+  .verificare-body .verificare-main p,.binara-body .binara-main p,.interclasare-body .interclasare-main p,
+  .recursivitate-body .recursivitate-main p,.divide-body .divide-main p,.backtracking-body .backtracking-main p,
+  .greedy-body .greedy-main p{
     font-weight:600;
     font-size:15px;
   }
@@ -396,7 +406,7 @@ pre {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-.while-img,.do_while-img,.for-img,.verificare-img,.interclasare-img{
+.while-img,.do_while-img,.for-img,.verificare-img,.interclasare-img,.divide-img{
   text-align: center;
   margin-top:20px;
 }

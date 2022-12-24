@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Backtracking</title>
+</head>
+<body>
+     <!------- NAVBAR -------->
+     <nav>
+        <div class="logo">
+          <img src="download-removebg-preview.png" class="sigla">
+         </div>
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="despre.html">Despre</a></li>
+              <li><a class="active" href="materie.html">Programă</a></li>
+              <li><a href="probleme.html">Subiecte</a></li>
+          </ul>
+      </nav>
+      <!---------------------->
+      <!---backtracking-main-->
+        <div class="backtracking-body">
+            <div class="backtracking-main">
+                <p>Metoda backtracking poate fi folosită în rezolvarea a diverse probleme. Este o metodă lentă, dar de multe ori este singura pe care 
+                <br>o avem la dispoziție!</p>
+                <h2>Introducere</h2>
+                <p>Metoda backtracking poate fi aplicată în rezolvarea problemelor care respectă următoarele condiții:</p>
+                <br>
+                <ul>
+                    <li>soluția poate fi reprezentată printr-un tablou <code>x[]=(x[1], x[2], ..., x[n])</code>, fiecare element <code>x[i]</code> aparținând unei mulțimi 
+                    <br>cunoscute <code>A<sub>i</sub></code>;</li>
+                    <li>fiecare mulțime <code>A<sub>i</sub></code> este finită, iar elementele ei se află într-o relație de ordine precizată – de multe ori cele <code>n</code> mulțimi sunt 
+                    <br>identice;</li>
+                    <li>se cer toate soluțiile problemei sau se cere o anumită soluție care nu poate fi determinată într-un alt mod (de regulă mai rapid).</li>
+                </ul>
+                <p>Algoritmul de tip backtracking construiește vectorul <code>x[]</code> (numit <strong>vector soluție</strong>) astfel:</p>
+                <p>Fiecare pas k, începând (de regulă) de la pasul 1, se prelucrează elementul curent x[k] al vectorului soluție:</p>
+                <ul>
+                    <li><code>x[k]</code> primește pe rând valori din mulțimea corespunzătoare <code>A<sub>k</sub></code>;</li>
+                    <li>la fiecare pas se verifică dacă configurația curentă a vectorului soluție poate duce la o soluție finală – dacă valoarea lui <code>x[k]</code> este 
+                    <br>corectă în raport cu <code>x[1], x[2], … x[k-1]</code>:</li>
+                    <ul>
+                        <li>dacă valoarea nu este corectă, elementul curent <code>X[k]</code> primește următoarea valoare din <code>A<sub>k</sub></code> sau revenim la elementul 
+                        <br>anterior <code>x[k-1]</code>, dacă <code>X[k]</code> a primit toate valorile din <code>A<sub>k</sub></code> – pas înapoi;</li>
+                        <li>dacă valoarea lui <code>x[k]</code> este corectă (avem o soluție parțială), se verifică existența unei soluții finale a problemei:</li>
+                        <ul>
+                            <li>dacă configurația curentă a vectorului soluție <code>x</code> reprezintă soluție finală (de regulă) o afișăm;</li>
+                            <li>dacă nu am identificat o soluție finală trecem la următorul element, <code>x[k+1]</code>, și reluăm procesul pentru acest element 
+                            <br>– pas înainte.</li>
+                        </ul>
+                    </ul>
+                </ul>
+                <p>Pe măsură ce se construiește, vectorul soluție <code>x[]</code> reprezintă o <strong>soluție parțială</strong> a problemei. Când vectorul soluție este complet 
+                <br>construit, avem o <strong>soluție finală</strong> a problemei.</p>
+                <h2>Algoritmul general</h2>
+                <p>Metoda backtracking poate fi implementată iterativ sau recursiv. În ambele situații se se folosește o structură de de date de tip <strong>stivă</strong>. În 
+                <br>cazul implementării iterative, stiva trebuie gestionată intern în algoritm – ceea ce poate duce la dificulăți în implementăre. În cazul 
+                <br>implementării recursive se folosește spațiu de memorie de tip stivă – STACK alocat programului; implementarea recursivă este de 
+                <br>regulă mai scurtă și mai ușor de înțeles. Acest articol prezintă implementări recursive ale metodei.</p>
+                <br>
+                <p>Următorul subprogram recursiv prezintă algoritmul la modul general:</p>
+                <br>
+                <ul>
+                    <li>la fiecare apel <code>BACK(k)</code> se generează valori pentru elementul x[k] al vectorului soluție;</li>
+                    <li>instrucțiunea <code>Pentru</code> modelează condițiile externe;</li>
+                    <li>subprogramul <code>OK(k)</code> verifică condițiile interne</li>
+                    <li>subprogramul <code>Solutie(k)</code> verifică dacă configurația curentă a vectorului soluție reprezintă o soluție finală</li>
+                    <li>subprogramul <code>Afisare(k)</code> tratează soluția curentă a problemei – de exemplu o afișează!</li>
+                </ul>
+                    <pre class="pseudocod cm-s-default" data-lang="text/pseudocod" contenteditable="true" editable="true"><span class="cm-variable">subprogram</span> <span class="cm-variable">BACK</span>(<span class="cm-variable">k</span>)
+                        <span class="cm-variable">┌</span> <span class="cm-keyword">pentru</span> <span class="cm-variable">fiecare</span> <span class="cm-variable">element</span> <span class="cm-variable">i</span> <span class="cm-variable">din</span> <span class="cm-variable">A</span>[<span class="cm-variable">k</span>] <span class="cm-keyword">executa</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">x</span>[<span class="cm-variable">k</span>] <span class="cm-operator">←</span> <span class="cm-variable">i</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">┌</span> <span class="cm-keyword">daca</span> <span class="cm-variable">OK</span>(<span class="cm-variable">k</span>) <span class="cm-keyword">atunci</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">┌</span> <span class="cm-keyword">daca</span> <span class="cm-variable">Solutie</span>(<span class="cm-variable">k</span>) <span class="cm-keyword">atunci</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">Afisare</span>(<span class="cm-variable">k</span>)
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">│</span> <span class="cm-keyword">altfel</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">BACK</span>(<span class="cm-variable">k</span><span class="cm-operator">+</span><span class="cm-number">1</span>)
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>    <span class="cm-variable">└</span><span class="cm-variable">■</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">└</span><span class="cm-variable">■</span>
+                        <span class="cm-variable">└</span><span class="cm-variable">■</span>
+                    <span class="cm-variable">sfarsit_subprogram</span></pre>
+                    <h2>Un șablon C++</h2>
+                    <pre class="pseudocod cm-s-default" data-lang="text/pseudocod" contenteditable="true" editable="true">       <span class="cm-variable">┌</span> <span class="cm-keyword">daca</span> <span class="cm-variable">OK</span>(<span class="cm-variable">k</span>) <span class="cm-keyword">atunci</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">┌</span> <span class="cm-keyword">daca</span> <span class="cm-variable">Solutie</span>(<span class="cm-variable">k</span>) <span class="cm-keyword">atunci</span>
+                        <span class="cm-variable">│</span>    <span class="cm-variable">│</span>     <span class="cm-variable">Afisare</span>(<span class="cm-variable">k</span>)
+                        <span class="cm-variable">│</span>    <span class="cm-variable">└</span><span class="cm-variable">■</span>
+                        <span class="cm-variable">│</span>     <span class="cm-variable">BACK</span>(<span class="cm-variable">k</span><span class="cm-operator">+</span><span class="cm-number">1</span>)
+                        <span class="cm-variable">└</span><span class="cm-variable">■</span></pre>
+                    <h2>Complexitatea algoritmului</h2>
+                    <p><strong>Algoritmii Backtracking sunt exponențiali.</strong> Complexitatea depinde de la problemă la problemă dar este de tipul <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-20-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>a</mi><mi>n</mi></msup><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-181" style="width: 3.141em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.6em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1002.49em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-182"><span class="mi" id="MathJax-Span-183" style="font-family: MathJax_Math-italic;">O</span><span class="mo" id="MathJax-Span-184" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-185"><span style="display: inline-block; position: relative; width: 1.031em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.49em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-186" style="font-family: MathJax_Math-italic;">a</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.544em;"><span class="mi" id="MathJax-Span-187" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-188" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-20"> O(a^n) </script>. De exemplu:</p>
+                    <br>
+                    <ul>
+                        <li>generarea permutărilor unei mulțimi cu <code>n</code> elemente are complexitatea <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-21-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><mi>n</mi><mo>!</mo><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-189" style="width: 2.925em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.438em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1002.33em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-190"><span class="mi" id="MathJax-Span-191" style="font-family: MathJax_Math-italic;">O</span><span class="mo" id="MathJax-Span-192" style="font-family: MathJax_Main;">(</span><span class="mi" id="MathJax-Span-193" style="font-family: MathJax_Math-italic;">n</span><span class="mo" id="MathJax-Span-194" style="font-family: MathJax_Main;">!</span><span class="mo" id="MathJax-Span-195" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-21"> O(n!)</script>;</li>
+                        <li>generarea submulțimilor unei mulțimi cu <code>n</code> elemente are complexitatea <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-22-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mn>2</mn><mi>n</mi></msup><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-196" style="width: 3.087em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.546em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1002.44em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-197"><span class="mi" id="MathJax-Span-198" style="font-family: MathJax_Math-italic;">O</span><span class="mo" id="MathJax-Span-199" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-200"><span style="display: inline-block; position: relative; width: 0.977em; height: 0px;"><span style="position: absolute; clip: rect(3.195em, 1000.44em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-201" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.49em;"><span class="mi" id="MathJax-Span-202" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-203" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-22"> O(2^n) </script></li>
+                        <li>produsul cartezian <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-23-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><msup><mi>A</mi><mi>n</mi></msup></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-204" style="width: 1.518em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.247em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1001.25em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-205"><span class="msubsup" id="MathJax-Span-206"><span style="display: inline-block; position: relative; width: 1.247em; height: 0px;"><span style="position: absolute; clip: rect(3.141em, 1000.71em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-207" style="font-family: MathJax_Math-italic;">A</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.76em;"><span class="mi" id="MathJax-Span-208" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-23"> A^n</script> unde mulțimea <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-24-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>A</mi><mo>=</mo><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mo>&amp;#x2026;</mo><mo>,</mo><mi>m</mi><mo fence=&quot;false&quot; stretchy=&quot;false&quot;>}</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-209" style="width: 10.284em; display: inline-block;"><span style="display: inline-block; position: relative; width: 8.552em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1008.5em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-210"><span class="mi" id="MathJax-Span-211" style="font-family: MathJax_Math-italic;">A</span><span class="mo" id="MathJax-Span-212" style="font-family: MathJax_Main; padding-left: 0.273em;">=</span><span class="mo" id="MathJax-Span-213" style="font-family: MathJax_Main; padding-left: 0.273em;">{</span><span class="mn" id="MathJax-Span-214" style="font-family: MathJax_Main;">1</span><span class="mo" id="MathJax-Span-215" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-216" style="font-family: MathJax_Main; padding-left: 0.165em;">2</span><span class="mo" id="MathJax-Span-217" style="font-family: MathJax_Main;">,</span><span class="mn" id="MathJax-Span-218" style="font-family: MathJax_Main; padding-left: 0.165em;">3</span><span class="mo" id="MathJax-Span-219" style="font-family: MathJax_Main;">,</span><span class="mo" id="MathJax-Span-220" style="font-family: MathJax_Main; padding-left: 0.165em;">…</span><span class="mo" id="MathJax-Span-221" style="font-family: MathJax_Main; padding-left: 0.165em;">,</span><span class="mi" id="MathJax-Span-222" style="font-family: MathJax_Math-italic; padding-left: 0.165em;">m</span><span class="mo" id="MathJax-Span-223" style="font-family: MathJax_Main;">}</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-24"> A=\{1,2,3,…,m\}</script> are complexitatea <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-25-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>m</mi><mi>n</mi></msup><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-224" style="width: 3.52em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.925em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.247em, 1002.82em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-225"><span class="mi" id="MathJax-Span-226" style="font-family: MathJax_Math-italic;">O</span><span class="mo" id="MathJax-Span-227" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-228"><span style="display: inline-block; position: relative; width: 1.356em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.87em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-229" style="font-family: MathJax_Math-italic;">m</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.869em;"><span class="mi" id="MathJax-Span-230" style="font-size: 70.7%; font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-231" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.302em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-25">O(m^n)</script></li>
+                        <li>etc.</li>
+                    </ul>
+                    <div style="margin-bottom:50px"></div>
+            </div>
+        </div>
+      <!---------------------->
+       <!-------Footer--------->
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
+            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <ul class="list">
+            <li>
+              <a href="index.html">Acasă</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="despre.html">Despre</a>
+            </li>
+          </ul>
+    </div>
+    <!----------------------->
+</body>
+</html>

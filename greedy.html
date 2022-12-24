@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <link rel="stylesheet" href="styles.css">
+    <title>Metoda Greedy</title>
+</head>
+<body>
+     <!------- NAVBAR -------->
+     <nav>
+        <div class="logo">
+          <img src="download-removebg-preview.png" class="sigla">
+         </div>
+          <input type="checkbox" id="click">
+          <label for="click" class="menu-btn">
+              <i class="fas fa-bars"></i>
+          </label>
+          <ul>
+              <li><a href="index.html">Acasă</a></li>
+              <li><a href="despre.html">Despre</a></li>
+              <li><a class="active" href="materie.html">Programă</a></li>
+              <li><a href="probleme.html">Subiecte</a></li>
+          </ul>
+      </nav>
+      <!---------------------->
+      <!-----greedy-main------>
+      <div class="greedy-body">
+        <div class="greedy-main">
+            <p>Metoda Greedy este o metodă care poate fi uneori folosită în rezolvarea problemelor de următorul tip: Se dă o mulțime <code>A</code>. 
+            <br>Să se determine o submulțime <code>B</code> a lui <code>A</code> astfel încât să fie îndeplinite anumite condiții – acestea depinzând de problema propriu-zisă.</p>
+            <h2>Algoritm general</h2>
+            <pre contenteditable="true" editable="true">B ← ∅
+                terminat ← FALSE
+                Execută 
+                    Alege convenabil x ∈ A
+                    Dacă x poate fi adăugat în B Atunci
+                        B ← B ∪ {x}
+                    Altfel
+                        terminat ← TRUE
+                    SfârșitDacă
+                Cât timp terminat=FALSE</pre>
+            <h2>Observații</h2>
+            <ul>
+            <li>stabilirea elementului care va fi adăugat în soluția <code>B</code> se face alegându-l pe cel mai bun din 
+            <br>acel moment – este un <em>optim local</em>. Din acest motiv se numește <strong>Greedy</strong> (lacom);</li>
+            <li>după adăugarea în soluția <code>B</code> a unui anumit element, acesta va rămâne în soluție până la final. 
+            <br>Nu există un mecanism de revenire la la un pas anterior, precum la metoda Backtracking;</li>
+            <li>alegerea optimului local nu duce întotdeauna la cea mai bună soluție <code>B</code>; metoda Greedy 
+            <br>nu este întotdeauna corectă;</li>
+            <li>schema prezentată mai sus este vagă și nu poate fi standardizată – să avem un algoritm 
+            <br>detaliat care să poată fi aplicat de fiecare dată;</li>
+            <li>sunt relativ puține probleme care pot fi rezolvate cu metoda Greedy;</li>
+            <li>complexitatea metodei este de regulă polinomială – <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style="position: relative;" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>O</mi><mo stretchy=&quot;false&quot;>(</mo><msup><mi>n</mi><mi>k</mi></msup><mo stretchy=&quot;false&quot;>)</mo></math>" role="presentation"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-1" style="width: 3.141em; display: inline-block;"><span style="display: inline-block; position: relative; width: 2.6em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.139em, 1002.49em, 2.6em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="mi" id="MathJax-Span-3" style="font-family: MathJax_Math-italic;">O</span><span class="mo" id="MathJax-Span-4" style="font-family: MathJax_Main;">(</span><span class="msubsup" id="MathJax-Span-5"><span style="display: inline-block; position: relative; width: 1.031em; height: 0px;"><span style="position: absolute; clip: rect(3.412em, 1000.6em, 4.169em, -999.997em); top: -4.002em; left: 0em;"><span class="mi" id="MathJax-Span-6" style="font-family: MathJax_Math-italic;">n</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span><span style="position: absolute; top: -4.38em; left: 0.598em;"><span class="mi" id="MathJax-Span-7" style="font-size: 70.7%; font-family: MathJax_Math-italic;">k</span><span style="display: inline-block; width: 0px; height: 4.007em;"></span></span></span></span><span class="mo" id="MathJax-Span-8" style="font-family: MathJax_Main;">)</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.386em; border-left: 0px solid; width: 0px; height: 1.432em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-1"> O(n^k)</script>, unde <span class="MathJax_Preview" style="color: inherit; display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" data-mathml="<math xmlns=&quot;http://www.w3.org/1998/Math/MathML&quot;><mi>k</mi></math>" role="presentation" style="position: relative;"><nobr aria-hidden="true"><span class="math" id="MathJax-Span-9" style="width: 0.652em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.544em; height: 0px; font-size: 120%;"><span style="position: absolute; clip: rect(1.301em, 1000.54em, 2.33em, -999.997em); top: -2.162em; left: 0em;"><span class="mrow" id="MathJax-Span-10"><span class="mi" id="MathJax-Span-11" style="font-family: MathJax_Math-italic;">k</span></span><span style="display: inline-block; width: 0px; height: 2.167em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.062em; border-left: 0px solid; width: 0px; height: 0.977em;"></span></span></nobr><span class="MJX_Assistive_MathML" role="presentation"><math xmlns="http://www.w3.org/1998/Math/MathML"></math></span></span><script type="math/tex" id="MathJax-Element-2">k</script> este constant;</li>
+            <li>folosim metoda Greedy în două situații:</li>
+            <ul>
+                <li>știm sigur că rezolvarea este corectă (avem o demonstrație de natură matematică a 
+                <br>corectitudinii);</li>
+                <li>nu avem decât soluții exponențiale (de tip Backtracking) și un algoritm Greedy dă o 
+                <br>soluție nu neapărat optimă, dar acceptabilă.</li>
+            </ul>
+            <li>de regulă, înainte de începe alegerea elementelor convenabile din mulțimea <code>A</code>, elementele sale sunt ordonate după un criteriu 
+            <br>specific, astfel încât alegerea optimului local să fie cât mai rapidă;</li>
+            </ul>
+            <div style="margin-bottom:50px"></div>
+        </div>
+      </div>
+      <!---------------------->
+       <!-------Footer--------->
+    <div class="footer">
+        <div class="social">
+            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
+            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          </div>
+          <ul class="list">
+            <li>
+              <a href="index.html">Acasă</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li>
+              <a href="despre.html">Despre</a>
+            </li>
+          </ul>
+    </div>
+    <!----------------------->
+</body>
+</html>
