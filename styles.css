@@ -267,7 +267,7 @@ a.mainBtn {
 .nav{
   position:fixed;
   right:5px;
-  top:180px;
+  top:235px;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -276,7 +276,6 @@ a.mainBtn {
 }
 .nav a{
   text-decoration: none;
-  color:var(--gri-deschis);
   font-size:1.5em;
 }
  .main-materie{
@@ -333,6 +332,20 @@ a.mainBtn {
     margin:0;
  }
 /*-------------------*/
+/*----main despre----*/
+.despre-main{
+  width:100%;
+  height: 100vh;
+  background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+}
+/*------------------*/
+/*---contact-main---*/
+.contact-main{
+  width:100%;
+  height: 100vh;
+  background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+}
+/*------------------*/
 /*----main pagini materie----*/
   .tipuri-body,.variabile-body,.structuri-body,.while-body,.do_while-body,.for-body,.interschimbare-body,.descompunere-body,
   .verificare-body,.binara-body,.interclasare-body,.recursivitate-body,.divide-body,.backtracking-body,.greedy-body{
