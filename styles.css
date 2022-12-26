@@ -333,10 +333,31 @@ a.mainBtn {
  }
 /*-------------------*/
 /*----main despre----*/
-.despre-main{
+.despre-body{
   width:100%;
   height: 100vh;
   background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+}
+.despre-main{
+  width:60%;
+  height:60vh;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:auto;
+  margin-bottom:auto;
+}
+.despre-main h1{
+  font-size:30px;
+  color:var(--alb);
+  text-align:center;
+}
+.despre-main p{
+  font-size:24px;
+  color:var(--gri-inchis);
+}
+.img{
+  display:none;
 }
 /*------------------*/
 /*---contact-main---*/
