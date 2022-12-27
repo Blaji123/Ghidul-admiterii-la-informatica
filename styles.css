@@ -18,6 +18,7 @@
     --info_albastru:#428bca;
     --background_gri:#ccc;
     --rosu:#c7254e;
+    --border-gri:#ced4da;
 }
 
 /* ----NAVBAR---- */
@@ -138,6 +139,7 @@ input[type="checkbox"] {
     background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
 }
 .text h1 {
+    font-family:Arial,serif;
     color:var(--gri);
     margin-bottom: 20px;
 }
@@ -259,10 +261,11 @@ a.mainBtn {
     width:100%;
 }
 .materie-header{
+    font-family:Arial,serif;
     text-align: center;
     margin-bottom:50px;
     margin-top:20px;
-    color:var(--gri-inchis);
+    color:var(--alb);
 }
 .nav{
   position:fixed;
@@ -336,18 +339,19 @@ a.mainBtn {
 .despre-body{
   width:100%;
   height: 100vh;
+  position: relative;
   background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
 }
 .despre-main{
   width:60%;
-  height:60vh;
-  display:block;
-  margin-left:auto;
-  margin-right:auto;
-  margin-top:auto;
-  margin-bottom:auto;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .despre-main h1{
+  font-family:Arial,serif;
   font-size:30px;
   color:var(--alb);
   text-align:center;
@@ -356,17 +360,131 @@ a.mainBtn {
   font-size:24px;
   color:var(--gri-inchis);
 }
-.img{
-  display:none;
+.despre-img{
+  width:230px;
+  height:260px;
+  border-radius:6px;
+  border:3px solid var(--turcoaz);
+}
+#photo1{
+  top:20px;
+  left:20px;
+  position:absolute;
+  transform: rotate(5deg);
+}
+#photo2{
+  bottom:20px;
+  left:20px;
+  position:absolute;
+  transform: rotate(355deg);
+}
+#photo3{
+  right:20px;
+  top:20px;
+  position:absolute;
+  transform: rotate(-5deg);
+}
+#photo4{
+  right:20px;
+  bottom:20px;
+  position:absolute;
+  transform:rotate(-355deg);
 }
 /*------------------*/
 /*---contact-main---*/
 .contact-main{
-  width:100%;
+  top: 0;
+  left: 0;
   height: 100vh;
-  background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+  width: 100%;
+  z-index: -1;
+  background-image: linear-gradient( 115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7) ), url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: repeat;
+  background-position: center;
+}
+label{
+  display:block;
+  margin: 0.5rem 0;
+}
+#contact-form{
+  display:flex;
+  background-color :var(--main);
+  flex-direction: column;
+  height:70vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  max-width: 500px;
+}
+.contact-main h1{
+  font-family:Arial,serif;
+  color:var(--alb);
+  text-align:center;
+  padding-top:20px;
+  margin-bottom:0;
+  font-size:40px;
+}
+#contact-p{
+  color:var(--gri-inchis);
+  text-align:center;
+  margin-top:5px;
+  padding-bottom:20px;
+  font-size:18px;
+}
+input, textarea, select{
+  width:100%;
+  margin:5px 0 0 0;
+}
+#textarea-label{
+  padding-top:20px;
+}
+#textarea-label,#name-label, #email-label,#file-label{
+  font-family: 'Roboto Condensed', sans-serif;
+  color:var(--alb);
+  font-size:19px;
+}
+.text-control{
+  width: 100%;
+  height: 2rem;
+  padding: 0.375rem 0.75rem;
+  color: var(--gri-deschis);
+  background-color: var(--alb);
+  background-clip: padding-box;
+  border: 1px solid var(--border-gri);
+  border-radius: 0.25rem;
+}
+input[type="submit"] {
+  display: block;
+  width: 60%;
+  margin: 1em auto;
+  height: 2em;
+  font-size: 1.1rem;
+  color:var(--main);
+  background-color:var(--background_gri);
+  border-color:var(--alb);
+  min-width: 300px;
+  border-radius:6px;
+  cursor: pointer;
+}
+#file{
+  color:var(--gri-deschis);
+}
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: var(--gri-deschis);
 }
 /*------------------*/
+/*--probleme-main--*/
+.probleme-main{
+  background:linear-gradient(to left top, hsl(203, 82%, 18%),hsl(203, 82%, 13%));
+  height:100vh;
+  width:100%;
+}
+/*-----------------*/
 /*----main pagini materie----*/
   .tipuri-body,.variabile-body,.structuri-body,.while-body,.do_while-body,.for-body,.interschimbare-body,.descompunere-body,
   .verificare-body,.binara-body,.interclasare-body,.recursivitate-body,.divide-body,.backtracking-body,.greedy-body{

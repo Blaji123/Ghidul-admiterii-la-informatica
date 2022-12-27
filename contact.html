@@ -19,7 +19,7 @@
               <i class="fas fa-bars"></i>
           </label>
           <ul>
-              <li><a a class="active" href="index.html">Acasă</a></li>
+              <li><a class="active" href="index.html">Acasă</a></li>
               <li><a href="despre.html">Despre</a></li>
               <li><a href="materie.html">Programă</a></li>
               <li><a href="probleme.html">Subiecte</a></li>
@@ -28,7 +28,28 @@
       <!---------------------->
       <!---contact-main------->
         <div class="contact-main">
-
+            <h1>Contact</h1>
+            <p id="contact-p">Dacă doriți să ne contactați sau aveți sugestii pentru îmbunătățirea paginii, puteți completa formularul de mai jos.</p>
+            <form id="contact-form">
+                <label id="name-label"> Nume
+                  <input id="name" type="text" required placeholder="Pop Marian" class="text-control"/>
+                </label>
+                <label id="email-label"> Email
+                  <input id="email" type="email" required placeholder="pop_marian@exemplu.com" class="text-control"/>               
+                </label>
+                <div style="margin-top:20px"></div>
+                <label for="file" id="file-label">
+									Atașează fișiere (opțional)
+                </label>
+                <p class="help-block">
+									Cel mult 3 fișiere. Dimensiunea totală trebuie să fie mai mică decât 2.00 MB.
+								</p>
+                <input type="file" id="file" multiple/>
+              </label>
+                <label id="textarea-label">Mesaj</label>
+                <textarea name="relationship" cols="40" rows="4" ></textarea>
+                <input type="submit" id="submit">
+            </form>
         </div>
       <!---------------------->
       <!-------Footer--------->
