@@ -26,3 +26,10 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+function myFunction(){
+  var button=document.getElementById('click');
+  if(button.checked==true)
+     document.body.style['overflow-y'] = 'hidden';
+  else
+     document.body.style['overflow-y'] = 'auto';
+}

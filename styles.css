@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+  display: block;
+}
+
 :root {
     --main: #06283D;
     --turcoaz: #256D85;
@@ -52,7 +56,6 @@ nav>ul {
 nav>ul>li {
     margin: 0 0.313em;
 }
-
 nav>ul>li>a {
     color: var(--gri);
     text-decoration: none;
@@ -180,7 +183,7 @@ input[type="checkbox"] {
    text-decoration:none;
    color:var(--gri);
 }
-a.mainBtn{
+.mainBtn{
     display:block;
     margin-top:1.250em;
     border-radius: 0.313em;
@@ -190,6 +193,12 @@ a.mainBtn{
     cursor:pointer;
     text-align: center;
     color:var(--gri);
+}
+@media(max-width:485px){
+  .mainBtn{
+    width:100%;
+    font-size:10px;
+  }
 }
 a.mainBtn {
     -webkit-appearance: button;
@@ -385,6 +394,17 @@ a.mainBtn {
   border-radius:0.375em;
   border:3px solid var(--turcoaz);
 }
+@media(max-width:1200px){
+  .despre-img{
+    width:25%;
+    height:25%;
+  }
+}
+@media(max-width:410px){
+  .despre-main p{
+    font-size:1.125rem;
+  }
+}
 #photo1{
   top:20px;
   left:20px;
@@ -554,6 +574,7 @@ input[type="submit"] {
 /*----main pagini materie----*/
   .tipuri-body,.variabile-body,.structuri-body,.while-body,.do_while-body,.for-body,.interschimbare-body,.descompunere-body,
   .verificare-body,.binara-body,.interclasare-body,.recursivitate-body,.divide-body,.backtracking-body,.greedy-body{
+    min-height: 80vh;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -562,6 +583,7 @@ input[type="submit"] {
     font-size:1rem;
     color:var(--gri-inchis);
     font-family: 'Times New Roman',serif;
+    overflow:auto;
   }
   .tipuri-body .tipuri-main h2,.variabile-body .variabile-main h2,.while-body .while-main h2,.do_while-body .do_while-main h2,
   .for-body .for-main h2,.interschimbare-body .interschimbare-main h2,.descompunere-body .descompunere-main h2,
@@ -648,7 +670,7 @@ pre {
   border-radius: 4px;
 }
 pre {
-  overflow: auto;
+  overflow-y: auto;
 }
 .while-img,.do_while-img,.for-img,.verificare-img,.interclasare-img,.divide-img{
   text-align: center;
@@ -660,7 +682,11 @@ pre {
    width:60%;
  }
 }
-
+@media(max-width:760px){
+  .divide-img1{
+    width:60%;
+  }
+}
 .for-p{
   margin-top:1.250em;
   margin-bottom:1.250em;
