@@ -1,56 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Interclasare</title>
-</head>
-<body>
+  </head>
+  <body>
     <!------- NAVBAR -------->
     <nav>
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Materie</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!---interclasare-main-->
+    <script src="index.js"></script>
+    <div class="interclasare-body">
+      <div class="interclasare-main">
+        <p>
+          Considerăm două tablouri unidimensionale cu elemente numere întregi
+          <strong>ordonate crescător</strong>. Se dorește construirea unui alt
+          tablou, <br />care să conțină valorile din cele două tablouri, în
+          ordine.
+        </p>
+        <br />
+        <p>
+          O soluție <strong>foarte eficientă</strong> este
+          <strong>interclasarea</strong>:
+        </p>
+        <br />
+        <ul>
+          <li>
+            considerăm două tablouri, cu <code>n</code>, respectiv
+            <code>m</code> elemente, <strong>ordonate crescător</strong>
+          </li>
+          <li>cele două tablouri se parcurg concomitent;</li>
+          <li>se alege valoarea mai mică dintre cele două elemente curente</li>
           <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Materie</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
+            <li>se adaugă în al treilea tablou</li>
+            <li>
+              se avansează numai în tabloul din care am ales valoarea de adăugat
+            </li>
           </ul>
-      </nav>
-      <!---------------------->
-      <!---interclasare-main-->
-      <script src="index.js"></script>
-      <div class="interclasare-body">
-        <div class="interclasare-main">
-            <p>Considerăm două tablouri unidimensionale cu elemente numere întregi <strong>ordonate crescător</strong>. Se dorește construirea unui alt tablou, 
-            <br>care să conțină valorile din cele două tablouri, în ordine.</p>
-            <br>
-            <p>O soluție <strong>foarte eficientă</strong> este <strong>interclasarea</strong>:</p>
-            <br>
-            <ul>
-                <li>considerăm două tablouri, cu <code>n</code>, respectiv <code>m</code> elemente, <strong>ordonate crescător</strong></li>
-                <li>cele două tablouri se parcurg concomitent;</li>
-                <li>se alege valoarea mai mică dintre cele două elemente curente</li>
-                <ul>
-                    <li>se adaugă în al treilea tablou</li>
-                    <li>se avansează numai în tabloul din care am ales valoarea de adăugat</li>
-                </ul>
-                <li>parcurgerea unuia dintre cele două tablouri se încheie</li>
-                <li>toate elementele din celălalt tablou, neparcurse încă, sunt adăugate în tabloul destinație</li>
-                <li>tabloul destinație are <code>p = n + m</code> elemente</li>
-                </ul>
-                <p class="interclasare-img">
-                    <img class="img" src="interclasare-animatie-1x-1000ms.gif">
-                </p>
-                <pre contenteditable="true" editable="true">int n,a[100000], m , b[100000], p, c[200000];
+          <li>parcurgerea unuia dintre cele două tablouri se încheie</li>
+          <li>
+            toate elementele din celălalt tablou, neparcurse încă, sunt adăugate
+            în tabloul destinație
+          </li>
+          <li>tabloul destinație are <code>p = n + m</code> elemente</li>
+        </ul>
+        <p class="interclasare-img">
+          <img class="img" src="interclasare-animatie-1x-1000ms.gif" />
+        </p>
+        <pre contenteditable="true" editable="true">
+int n,a[100000], m , b[100000], p, c[200000];
 
                     //citire a[] cu n elemente
                     //citire b[] cu m elemente
@@ -65,39 +84,54 @@
                     while(i &lt; n)
                         c[p ++] = a[i ++];
                     while(j &lt; m)
-                        c[p ++] = b[j ++];</pre>
-                <div style="margin-bottom:20px"></div>
-                <p><strong>Observație</strong>: Doar una dintre instrucțiunile <code>while(i < n)...</code> și <code>while(j < m)...</code> se va executa, 
-                <br>deoarece exact una dintre condițiile <code>i < n</code> și <code>j < m</code> este adevărată. În prima structură repetitivă, la 
-                <br>fiecare pas, doar una dintre variabilele <code>i</code> și <code>j</code> se mărește, deci la final una dintre condiții este adevărată 
-                <br>și una este falsă.</p>
-                <br>
-                <p>Algoritmul de interclasare este <strong>foarte eficient</strong>. El are complexitate <code>O(n+m)</code>. De asemenea, este 
-                <br>posibilă și interclasarea valorilor din două fișiere, singura condiție este ca valorile să fie ordonate.</p>
-                <div style="margin-bottom:50px"></div>
-        </div>
+                        c[p ++] = b[j ++];</pre
+        >
+        <div style="margin-bottom: 20px"></div>
+        <p>
+          <strong>Observație</strong>: Doar una dintre instrucțiunile
+          <code>while(i < n)...</code> și <code>while(j < m)...</code> se va
+          executa, <br />deoarece exact una dintre condițiile
+          <code>i < n</code> și <code>j < m</code> este adevărată. În prima
+          structură repetitivă, la <br />fiecare pas, doar una dintre
+          variabilele <code>i</code> și <code>j</code> se mărește, deci la final
+          una dintre condiții este adevărată <br />și una este falsă.
+        </p>
+        <br />
+        <p>
+          Algoritmul de interclasare este <strong>foarte eficient</strong>. El
+          are complexitate <code>O(n+m)</code>. De asemenea, este <br />posibilă
+          și interclasarea valorilor din două fișiere, singura condiție este ca
+          valorile să fie ordonate.
+        </p>
+        <div style="margin-bottom: 50px"></div>
       </div>
-      <!---------------------->
-      <!-------Footer--------->
-      <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+    </div>
+    <!---------------------->
+    <!-------Footer--------->
+    <div class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
     </div>
     <!----------------------->
-</body>
+  </body>
 </html>

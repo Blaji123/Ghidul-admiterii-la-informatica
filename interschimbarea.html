@@ -1,73 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Interschimbare</title>
-</head>
-<body>
-  <!------- NAVBAR -------->
+  </head>
+  <body>
+    <!------- NAVBAR -------->
     <nav>
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
-          <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Materie</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
-          </ul>
-      </nav>
-      <!---------------------->
-      <!--Interschimbare-main-->
-      <script src="index.js"></script>
-      <div class="interschimbare-body">
-        <div class="interschimbare-main">
-            <h2>Interschimbare</h2>
-            <p>Interschimbarea este operația prin care valorile a două variabile se sechimbă între ele. De exemplu, dacă variabilele <code>A</code> și <code>B</code> au valorile <code>5</code>, 
-            <br>respectiv <code>7</code>, în urma interschimbării <code>B</code> va avea valoarea <code>5</code> și <code>A</code> va avea valoarea <code>7</code>.</p>
-            <br>
-            <p>Interschimbarea se face prin interschimbări succesive. Există mai multe metode, dar cea mai utilizată este cunoscută sub numele de 
-            <br><strong>regula paharelor</strong>, deoarece este similară cu modul în care se schimbă conținutul a două pahare. În acest caz este nevoie de încă un 
-            <br>pahar, iar în cazul interschibării variabilelor este nevoie de o variabilă auxiliară.</p>
-            <br>
-            <p>Schema interschimbării este următoarea:</p>
-            <pre class="code_cpp cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true"><span class="cm-keyword">int</span> <span class="cm-variable">A</span> <span class="cm-operator">=</span> <span class="cm-number">5</span> , <span class="cm-variable">B</span> <span class="cm-operator">=</span> <span class="cm-number">7</span>;
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Materie</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!--Interschimbare-main-->
+    <script src="index.js"></script>
+    <div class="interschimbare-body">
+      <div class="interschimbare-main">
+        <h2>Interschimbare</h2>
+        <p>
+          Interschimbarea este operația prin care valorile a două variabile se
+          sechimbă între ele. De exemplu, dacă variabilele <code>A</code> și
+          <code>B</code> au valorile <code>5</code>, <br />respectiv
+          <code>7</code>, în urma interschimbării <code>B</code> va avea
+          valoarea <code>5</code> și <code>A</code> va avea valoarea
+          <code>7</code>.
+        </p>
+        <br />
+        <p>
+          Interschimbarea se face prin interschimbări succesive. Există mai
+          multe metode, dar cea mai utilizată este cunoscută sub numele de
+          <br /><strong>regula paharelor</strong>, deoarece este similară cu
+          modul în care se schimbă conținutul a două pahare. În acest caz este
+          nevoie de încă un <br />pahar, iar în cazul interschibării
+          variabilelor este nevoie de o variabilă auxiliară.
+        </p>
+        <br />
+        <p>Schema interschimbării este următoarea:</p>
+        <pre
+          class="code_cpp cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default cm-s-default"
+          data-lang="text/x-c++src"
+          contenteditable="true"
+          editable="true"
+        ><span class="cm-keyword">int</span> <span class="cm-variable">A</span> <span class="cm-operator">=</span> <span class="cm-number">5</span> , <span class="cm-variable">B</span> <span class="cm-operator">=</span> <span class="cm-number">7</span>;
               <span class="cm-keyword">int</span> <span class="cm-variable">aux</span> <span class="cm-operator">=</span> <span class="cm-variable">A</span>;
               <span class="cm-variable">A</span> <span class="cm-operator">=</span> <span class="cm-variable">B</span>;
               <span class="cm-variable">B</span> <span class="cm-operator">=</span> <span class="cm-variable">aux</span>;
               <span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">A</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-string">" "</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">B</span>; <span class="cm-comment">// 7 5</span></pre>
-              <div style="margin-bottom:60px"></div>
-        </div>
+        <div style="margin-bottom: 60px"></div>
       </div>
-      <!---------------------->
-      <!-------Footer--------->
-      <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+    </div>
+    <!---------------------->
+    <!-------Footer--------->
+    <div class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
     </div>
     <!----------------------->
-</body>
+  </body>
 </html>

@@ -1,79 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>for</title>
-</head>
-<body>
+  </head>
+  <body>
     <!------- NAVBAR -------->
     <nav>
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Programă</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!-------for-main------->
+    <script src="index.js"></script>
+    <div class="for-body">
+      <div class="for-main">
+        <p>
+          Instrucțiunea <code>for</code> este o structură repetitivă cu număr
+          necunoscut de pași și test inițial, echivalentă cu <code>while</code>.
+        </p>
+        <h2>Sintaxa</h2>
+        <p class="descriere_sintaxa clear">
+          <strong>for</strong> (<code>Expresie_de_Initializare</code>
+          <strong>;</strong> <code>Expresie_de_Testare</code>
+          <strong>;</strong> <code>Expresie_de_Continuare</code>)
+          <code>Instructiune</code>
+        </p>
+        <h2>Mod de execuție</h2>
+        <ol>
+          <li>Se evaluează <code>Expresie_de_Initializare</code></li>
+          <li>
+            Se evaluează <code>Expresie_de_Testare</code>. Rezultatul se
+            convertește la <code>bool</code>.
+          </li>
+          <li>Dacă rezultatul este <code>true</code>:</li>
           <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Programă</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
+            <li>Se execută <code>Instructiune</code>.</li>
+            <li>Se evaluează <code>Expresie_de_Continuare</code>.</li>
+            <li>Se revine la pasul 2.</li>
           </ul>
-      </nav>
-      <!---------------------->
-      <!-------for-main------->
-      <script src="index.js"></script>
-         <div class="for-body">
-            <div class="for-main">
-                <p>Instrucțiunea <code>for</code> este o structură repetitivă cu număr necunoscut de pași și test inițial, echivalentă cu <code>while</code>.</p>
-                <h2>Sintaxa</h2>
-                <p class="descriere_sintaxa clear"><strong>for</strong> (<code>Expresie_de_Initializare</code> <strong>;</strong> <code>Expresie_de_Testare</code> <strong>;</strong> <code>Expresie_de_Continuare</code>)
-                    <code>Instructiune</code></p>
-                <h2>Mod de execuție</h2>
-                <ol>
-                    <li>Se evaluează <code>Expresie_de_Initializare</code></li>
-                    <li>Se evaluează <code>Expresie_de_Testare</code>. Rezultatul se convertește la <code>bool</code>.</li>
-                    <li>Dacă rezultatul este <code>true</code>:</li>
-                       <ul>
-                          <li>Se execută <code>Instructiune</code>.</li>
-                          <li>Se evaluează <code>Expresie_de_Continuare</code>.</li>
-                          <li>Se revine la pasul 2.</li>
-                       </ul>
-                    <li>Dacă rezultatul este <code>false</code>, se trece la instrucțiunea de după <code>for</code>.</li>
-                </ol>
-                    <p class="for-img">
-                        <img class="img" src="for.png">
-                    </p>
-                <h2>Observații</h2>
-                  <ul>
-                    <li>Instrucțiunea <code>for</code> este echivalentă cu instrucțiunea <code>while</code>. Sintaxa descrisă mai sus este echivalentă cu:</li>
-                  </ul>
-                  <p class="descriere_sintaxa for-p"> <code>Expresie_de_Initializare</code>;
-                    while( <code>Expresie_de_Testare</code> )
-                    {
-                       <code>Instructiune</code>
-                       <code>Expresie_de_Continuare</code>;
-                    }</p>
-                 <ul>
-                    <li><code>Instructiune</code> se execută cât timp <code>Expresie_de_Testare</code> este nenulă – condiție adevărată.</li>
-                    <li>Dacă <code>Expresie_de_Testare</code> este de început vidă, <code>Instructiune</code> nu se execută deloc, 
-                    <br>iar <code>Expresie_de_Continuare</code> nu se mai evaluează.</li>
-                    <li><code>Instructiune</code> poate fi orice fel de instrucțiune, dar una singură. Dacă sunt necesare mai multe instrucțiuni, 
-                    <br>se va folosi instrucțiunea compusă.</li>
-                    <li>Este necesar ca cel puțin o variabilă care apare în <code>Expresie_de_Testare</code> să-și modifice valoarea în 
-                    <br><code>Instructiune</code> sau la evalurea <code>Expresiei_de_Continuare</code>. Altfel se obține o <strong>buclă infinită</strong>.</li>
-                    <li>Cele trei expresii, <code>de_Initializare</code>, <code>de_Testare</code> și <code>de_Continuare</code> sunt separate prin caracterul <code>;</code> – obligatoriu!</li>
-                    <li>Oricare dintre cele trei expresii, <code>de_Initializare</code>, <code>de_Testare</code> și <code>de_Continuare</code>, eventual toate, poate să lipsească. 
-                    <br>În acest caz avem <strong>expresii vide</strong>. Dacă <code>Expresie_de_Testare</code> este vidă, rezultatul său este nenul!</li>
-                    <li><code>Expresie_de_Initializare</code> se execută o singură dată. Poate să conțină și declararea unor variabile. În acest caz, variabilele vor exista numai în instrucțiunea <code>for</code>.</li>
-                    <h2>Exemplu</h2>
-                    <p>Următorul program citește valoarea variabilei n și calculează suma primelor n numere naturale. Rulați-l analizând rezultatul pentru diverse valori ale lui n, inclusiv 0.</p>
-                    <pre class="code_cpp cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true"><span class="cm-meta">#include &lt;iostream&gt;</span>
+          <li>
+            Dacă rezultatul este <code>false</code>, se trece la instrucțiunea
+            de după <code>for</code>.
+          </li>
+        </ol>
+        <p class="for-img">
+          <img class="img" src="for.png" />
+        </p>
+        <h2>Observații</h2>
+        <ul>
+          <li>
+            Instrucțiunea <code>for</code> este echivalentă cu instrucțiunea
+            <code>while</code>. Sintaxa descrisă mai sus este echivalentă cu:
+          </li>
+        </ul>
+        <p class="descriere_sintaxa for-p">
+          <code>Expresie_de_Initializare</code>; while(
+          <code>Expresie_de_Testare</code> ) {
+          <code>Instructiune</code>
+          <code>Expresie_de_Continuare</code>; }
+        </p>
+        <ul>
+          <li>
+            <code>Instructiune</code> se execută cât timp
+            <code>Expresie_de_Testare</code> este nenulă – condiție adevărată.
+          </li>
+          <li>
+            Dacă <code>Expresie_de_Testare</code> este de început vidă,
+            <code>Instructiune</code> nu se execută deloc, <br />iar
+            <code>Expresie_de_Continuare</code> nu se mai evaluează.
+          </li>
+          <li>
+            <code>Instructiune</code> poate fi orice fel de instrucțiune, dar
+            una singură. Dacă sunt necesare mai multe instrucțiuni, <br />se va
+            folosi instrucțiunea compusă.
+          </li>
+          <li>
+            Este necesar ca cel puțin o variabilă care apare în
+            <code>Expresie_de_Testare</code> să-și modifice valoarea în
+            <br /><code>Instructiune</code> sau la evalurea
+            <code>Expresiei_de_Continuare</code>. Altfel se obține o
+            <strong>buclă infinită</strong>.
+          </li>
+          <li>
+            Cele trei expresii, <code>de_Initializare</code>,
+            <code>de_Testare</code> și <code>de_Continuare</code> sunt separate
+            prin caracterul <code>;</code> – obligatoriu!
+          </li>
+          <li>
+            Oricare dintre cele trei expresii, <code>de_Initializare</code>,
+            <code>de_Testare</code> și <code>de_Continuare</code>, eventual
+            toate, poate să lipsească. <br />În acest caz avem
+            <strong>expresii vide</strong>. Dacă
+            <code>Expresie_de_Testare</code> este vidă, rezultatul său este
+            nenul!
+          </li>
+          <li>
+            <code>Expresie_de_Initializare</code> se execută o singură dată.
+            Poate să conțină și declararea unor variabile. În acest caz,
+            variabilele vor exista numai în instrucțiunea <code>for</code>.
+          </li>
+          <h2>Exemplu</h2>
+          <p>
+            Următorul program citește valoarea variabilei n și calculează suma
+            primelor n numere naturale. Rulați-l analizând rezultatul pentru
+            diverse valori ale lui n, inclusiv 0.
+          </p>
+          <pre
+            class="code_cpp cm-s-default"
+            data-lang="text/x-c++src"
+            contenteditable="true"
+            editable="true"
+          ><span class="cm-meta">#include &lt;iostream&gt;</span>
                         <span class="cm-keyword">using</span> <span class="cm-keyword">namespace</span> <span class="cm-variable">std</span>;
                         <span class="cm-keyword">int</span> <span class="cm-variable">main</span> ()
                         {
@@ -85,31 +141,36 @@
                             <span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">S</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">endl</span>;
                             <span class="cm-keyword">return</span> <span class="cm-number">0</span>;
                         }</pre>
-                        <div style="margin-bottom:50px"></div>
-                 </ul>
-            </div>
-         </div>
-      <!---------------------->
-      <!-------Footer--------->
-    <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+          <div style="margin-bottom: 50px"></div>
+        </ul>
+      </div>
     </div>
-      <!----------------------->
-</body>
+    <!---------------------->
+    <!-------Footer--------->
+    <div class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
+    </div>
+    <!----------------------->
+  </body>
 </html>

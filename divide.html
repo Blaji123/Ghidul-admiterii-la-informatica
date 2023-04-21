@@ -1,64 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <title>Divide et Impera</title>
-</head>
-<body>
+  </head>
+  <body>
     <!------- NAVBAR -------->
     <nav>
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
-          <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Programă</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
-          </ul>
-      </nav>
-      <!---------------------->
-      <!-----divide-main------>
-      <script src="index.js"></script>
-        <div class="divide-body">
-            <div class="divide-main">
-                <p><strong>Divide et Impera</strong> este o metodă de programare bazată pe un principiu simplu:</p>
-                <br>
-                <ul>
-                    <li>problema dată se descompune în două (sau mai multe) subprobleme (de același tip ca problema inițială, dar de dimensiuni mai 
-                    <br>mici);</li>
-                    <li>se rezolvă independent fiecare subproblemă;</li>
-                    <li>se combină rezultatele obținute pentru subprobleme, obținând rezultatul problemei inițiale.</li>
-                </ul>
-                <br>
-                <p>Subproblemele trebuie să fie de același tip cu problema inițială, ele urmând a fi rezolvate prin aceeași tehnică.</p>
-                <br>
-                <p>Subproblemele în care se descompun problema dată trebuie să fie:</p>
-                <br>
-                <ul>
-                    <li>de același tip cu problema dată;</li>
-                    <li>de dimensiuni mai mici (mai “ușoare”);</li>
-                    <li>independente (să nu se suprapună, prelucrează seturi de date distincte).</li>
-                </ul>
-                <p class="divide-img">
-                     <img src="divide-et-impera.png" class="divide-img1">
-                </p>
-                <div style="margin-bottom:20px"></div>
-                <p>În tehnica Divide et Impera, în urma împărțirilor succesive în subprobleme, se ajunge în situația că problema curentă nu mai poate fi 
-                <br>împărțită în subprobleme. O asemenea problemă se numește <strong>problemă elementară</strong> și se rezolvă în alt mod – de regulă foarte 
-                <br>simplu.</p>
-                <br>
-                <p>Divide et Impera admite de regulă o implementare recursivă – rezolvarea problemei constă în rezolvarea unor subprobleme de 
-                <br>același tip. Un algoritm pseudocod care descrie metoda este:</p>
-                <pre contenteditable="true" editable="true">Algoritm DivImp(P)
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Programă</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!-----divide-main------>
+    <script src="index.js"></script>
+    <div class="divide-body">
+      <div class="divide-main">
+        <p>
+          <strong>Divide et Impera</strong> este o metodă de programare bazată
+          pe un principiu simplu:
+        </p>
+        <br />
+        <ul>
+          <li>
+            problema dată se descompune în două (sau mai multe) subprobleme (de
+            același tip ca problema inițială, dar de dimensiuni mai <br />mici);
+          </li>
+          <li>se rezolvă independent fiecare subproblemă;</li>
+          <li>
+            se combină rezultatele obținute pentru subprobleme, obținând
+            rezultatul problemei inițiale.
+          </li>
+        </ul>
+        <br />
+        <p>
+          Subproblemele trebuie să fie de același tip cu problema inițială, ele
+          urmând a fi rezolvate prin aceeași tehnică.
+        </p>
+        <br />
+        <p>Subproblemele în care se descompun problema dată trebuie să fie:</p>
+        <br />
+        <ul>
+          <li>de același tip cu problema dată;</li>
+          <li>de dimensiuni mai mici (mai “ușoare”);</li>
+          <li>
+            independente (să nu se suprapună, prelucrează seturi de date
+            distincte).
+          </li>
+        </ul>
+        <p class="divide-img">
+          <img src="divide-et-impera.png" class="divide-img1" />
+        </p>
+        <div style="margin-bottom: 20px"></div>
+        <p>
+          În tehnica Divide et Impera, în urma împărțirilor succesive în
+          subprobleme, se ajunge în situația că problema curentă nu mai poate fi
+          <br />împărțită în subprobleme. O asemenea problemă se numește
+          <strong>problemă elementară</strong> și se rezolvă în alt mod – de
+          regulă foarte <br />simplu.
+        </p>
+        <br />
+        <p>
+          Divide et Impera admite de regulă o implementare recursivă –
+          rezolvarea problemei constă în rezolvarea unor subprobleme de
+          <br />același tip. Un algoritm pseudocod care descrie metoda este:
+        </p>
+        <pre contenteditable="true" editable="true">
+Algoritm DivImp(P)
                     Dacă P este problemă elementară 
                         R &lt;- RezolvăDirect(P)
                     Altfel
@@ -67,10 +92,20 @@
                         R2 &lt;- DivImp(P2)
                         R &lt;- Combină(R1,R2)
                     SfârșitDacă
-                SfârșitAlgoritm</pre>
-                <h2>Aplicații</h2>
-                <p>Fie un vector <code>V</code> cu <code>n</code> elemente întregi, indexate de la <code>1</code> la <code>n</code>. Să se determine suma lor.</p>
-                <pre class="code_cpp cm-s-default" data-lang="text/x-c++src" contenteditable="true" editable="true"><span class="cm-keyword">int</span> <span class="cm-variable">Suma</span>(<span class="cm-keyword">int</span> <span class="cm-variable">V</span>[], <span class="cm-keyword">int</span> <span class="cm-variable">st</span>, <span class="cm-keyword">int</span> <span class="cm-variable">dr</span>)
+                SfârșitAlgoritm</pre
+        >
+        <h2>Aplicații</h2>
+        <p>
+          Fie un vector <code>V</code> cu <code>n</code> elemente întregi,
+          indexate de la <code>1</code> la <code>n</code>. Să se determine suma
+          lor.
+        </p>
+        <pre
+          class="code_cpp cm-s-default"
+          data-lang="text/x-c++src"
+          contenteditable="true"
+          editable="true"
+        ><span class="cm-keyword">int</span> <span class="cm-variable">Suma</span>(<span class="cm-keyword">int</span> <span class="cm-variable">V</span>[], <span class="cm-keyword">int</span> <span class="cm-variable">st</span>, <span class="cm-keyword">int</span> <span class="cm-variable">dr</span>)
                     {
                         <span class="cm-keyword">if</span>(<span class="cm-variable">st</span> <span class="cm-operator">==</span> <span class="cm-variable">dr</span>)
                             <span class="cm-keyword">return</span> <span class="cm-variable">V</span>[<span class="cm-variable">st</span>]; <span class="cm-comment">// problemă elementară</span>
@@ -89,30 +124,35 @@
                         <span class="cm-variable">cout</span> <span class="cm-operator">&lt;&lt;</span> <span class="cm-variable">Suma</span>(<span class="cm-variable">V</span>,<span class="cm-number">1</span>,<span class="cm-variable">n</span>);
                         <span class="cm-keyword">return</span> <span class="cm-number">0</span>;
                     }</pre>
-                    <div style="margin-bottom:50px"></div>
-            </div>
-        </div>
-      <!---------------------->
-      <!-------Footer--------->
+        <div style="margin-bottom: 50px"></div>
+      </div>
+    </div>
+    <!---------------------->
+    <!-------Footer--------->
     <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
     </div>
     <!----------------------->
-</body>
+  </body>
 </html>

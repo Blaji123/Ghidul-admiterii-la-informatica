@@ -1,50 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Căutare binară</title>
-</head>
-<body>
-     <!------- NAVBAR -------->
-     <nav>
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
-          <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Materie</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
-          </ul>
-      </nav>
-      <!---------------------->
-      <!----binara-main------->
-      <script src="index.js"></script>
-      <div class="binara-body">
-        <div class="binara-main">
-            <h2>Introducere</h2>
-            <p>Căutarea unei valori într-un vector se poate face în două moduri:</p>
-            <br>
-            <ul>
-                <li><strong>secvențial</strong> – presupune analizarea fiecărui element al vectorului într-o anumită ordine (de obicei de la stânga la dreapta). Când 
-                <br>se găsește valoarea căutată parcurgerea vectorului se poate opri. În cel mai rău caz, pentru un vector cu <code>n</code> elemente 
-                <br>parcurgerea face <code>n</code> pași, complexitatea timp a căutării secvențiale este <code>O(n)</code></li>
-                <li><strong>binar</strong>. Căutarea binară se poate face într-un vector numai dacă elementele acestuia sunt în ordine (de obicei crescătoare) 
-                <br>după un anumit criteriu (de obicei criteriul este chiar relația de ordine naturală între numere, cuvinte, etc). Căutarea binară 
-                <br>presupune împărțirea vectorului în secvențe din ce în ce mai mici, înjumătățindu-le și continuând cu jumătatea în care se poate 
-                <br>afla valoarea dorită (conform ordinii elementelor din vector).</li>
-                </ul>
-                <br>
-                <p>Algoritmul căutării binare este următorul:</p>
-                <pre contenteditable="true" editable="true">st ← 1
+  </head>
+  <body>
+    <!------- NAVBAR -------->
+    <nav>
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Materie</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!----binara-main------->
+    <script src="index.js"></script>
+    <div class="binara-body">
+      <div class="binara-main">
+        <h2>Introducere</h2>
+        <p>Căutarea unei valori într-un vector se poate face în două moduri:</p>
+        <br />
+        <ul>
+          <li>
+            <strong>secvențial</strong> – presupune analizarea fiecărui element
+            al vectorului într-o anumită ordine (de obicei de la stânga la
+            dreapta). Când <br />se găsește valoarea căutată parcurgerea
+            vectorului se poate opri. În cel mai rău caz, pentru un vector cu
+            <code>n</code> elemente <br />parcurgerea face <code>n</code> pași,
+            complexitatea timp a căutării secvențiale este <code>O(n)</code>
+          </li>
+          <li>
+            <strong>binar</strong>. Căutarea binară se poate face într-un vector
+            numai dacă elementele acestuia sunt în ordine (de obicei
+            crescătoare) <br />după un anumit criteriu (de obicei criteriul este
+            chiar relația de ordine naturală între numere, cuvinte, etc).
+            Căutarea binară <br />presupune împărțirea vectorului în secvențe
+            din ce în ce mai mici, înjumătățindu-le și continuând cu jumătatea
+            în care se poate <br />afla valoarea dorită (conform ordinii
+            elementelor din vector).
+          </li>
+        </ul>
+        <br />
+        <p>Algoritmul căutării binare este următorul:</p>
+        <pre contenteditable="true" editable="true">
+st ← 1
                     dr ← n
                     poz ← 0
                     CÂTTIMP st&lt;dr SI poz=0 EXECUTĂ
@@ -64,22 +79,37 @@
                         // x apare în vector pe poziția poz
                     ALTFEL
                         // x nu apare în vector 
-                    SFDACĂ</pre>
-            <h2>Altă variantă a căutării binare</h2>
-            <p>De multe nu este suficient să știm dacă o valoare dată apare sau nu în vector. Sunt numeroase 
-            <br>situații în care trebuie să aflăm un indice al vectorului (element al vectorului) care respectă o 
-            <br>anumită condiție în raport cu valoarea dată. De exemplu:</p>
-            <br>
-            <ul>
-                <li>să se determine cel mai mare indice <code>poz</code> pentru care <code>v[poz] ≤ x</code>;</li>
-                <li>să se determine cel mai mare indice <code>poz</code> pentru care <code>v[poz] < x</code>;</li>
-                <li>etc.</li>
-            </ul>
-            <br>
-            <p>Algoritmul de mai jos determină cel mai mare indice <code>poz</code> pentru care <code>v[poz] ≤ x</code>. El poate fi folosit și 
-            <br>pentru a verifica dacă <code>x</code> apare în vector, astfel: dacă la final <code>v[poz] = x</code>, atunci <code>x</code> apare în vector, in 
-            <br>caz contrar nu apare.</p>
-            <pre contenteditable="true" editable="true">st ← 1
+                    SFDACĂ</pre
+        >
+        <h2>Altă variantă a căutării binare</h2>
+        <p>
+          De multe nu este suficient să știm dacă o valoare dată apare sau nu în
+          vector. Sunt numeroase <br />situații în care trebuie să aflăm un
+          indice al vectorului (element al vectorului) care respectă o
+          <br />anumită condiție în raport cu valoarea dată. De exemplu:
+        </p>
+        <br />
+        <ul>
+          <li>
+            să se determine cel mai mare indice <code>poz</code> pentru care
+            <code>v[poz] ≤ x</code>;
+          </li>
+          <li>
+            să se determine cel mai mare indice <code>poz</code> pentru care
+            <code>v[poz] < x</code>;
+          </li>
+          <li>etc.</li>
+        </ul>
+        <br />
+        <p>
+          Algoritmul de mai jos determină cel mai mare indice
+          <code>poz</code> pentru care <code>v[poz] ≤ x</code>. El poate fi
+          folosit și <br />pentru a verifica dacă <code>x</code> apare în
+          vector, astfel: dacă la final <code>v[poz] = x</code>, atunci
+          <code>x</code> apare în vector, in <br />caz contrar nu apare.
+        </p>
+        <pre contenteditable="true" editable="true">
+st ← 1
                 dr ← n
                 poz ← n + 1
                 CÂTTIMP st ≤ dr EXECUTĂ
@@ -96,30 +126,36 @@
                     // x apare în șir pe poziția poz
                 ALTFEL
                     // x nu apare în șir (în acest caz, v[poz] &gt; x)
-                SFDACĂ</pre>
-                <div style="margin-bottom:50px"></div>
-        </div>
+                SFDACĂ</pre
+        >
+        <div style="margin-bottom: 50px"></div>
       </div>
-       <!-------Footer--------->
-       <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+    </div>
+    <!-------Footer--------->
+    <div class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
     </div>
     <!----------------------->
-</body>
+  </body>
 </html>

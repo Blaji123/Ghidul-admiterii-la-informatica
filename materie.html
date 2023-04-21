@@ -1,107 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <title>Programă</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!------- NAVBAR -------->
     <nav id="h20">
-        <div class="logo">
-          <img src="download-removebg-preview.png" class="sigla">
-         </div>
-         <input type="checkbox" id="click" onclick="myFunction()">
-          <label for="click" class="menu-btn">
-              <i class="fas fa-bars"></i>
-          </label>
-          <ul>
-              <li><a href="index.html">Acasă</a></li>
-              <li><a href="despre.html">Despre</a></li>
-              <li><a class="active" href="materie.html">Programă</a></li>
-              <li><a href="probleme.html">Subiecte</a></li>
-          </ul>
-      </nav>
-      <!---------------------->
-      <!--------main----------->
-      <script src="index.js"></script>
-      <div class="materie-body">
+      <div class="logo">
+        <img src="download-removebg-preview.png" class="sigla" />
+      </div>
+      <input type="checkbox" id="click" onclick="myFunction()" />
+      <label for="click" class="menu-btn">
+        <i class="fas fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html">Acasă</a></li>
+        <li><a href="despre.html">Despre</a></li>
+        <li><a class="active" href="materie.html">Programă</a></li>
+        <li><a href="probleme.html">Subiecte</a></li>
+      </ul>
+    </nav>
+    <!---------------------->
+    <!--------main----------->
+    <script src="index.js"></script>
+    <div class="materie-body">
       <header class="materie-header">
-          <h1>Programă admitere UBB</h1>
+        <h1>Programă admitere UBB</h1>
       </header>
-      <div class="nav">
-        <p><a href="#h20" class="hover-3">Cuprins</a></p>
+      <div class="main-materie">
+        <div class="materie-ma">
+          <section class="section1">
+            <h2 id="h21">Elemente de bază ale limbajului</h2>
+            <ul>
+              <li>
+                <a href="tipuri_de_date.html" class="hover-3"
+                  >Tipuri de date C++</a
+                >
+              </li>
+              <li>
+                <a href="variabile.html" class="hover-3"
+                  >Variabile și constante C++</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="section2">
+            <h2 id="h22">Structuri de control</h2>
+            <ul>
+              <li>
+                <a href="structuri.html" class="hover-3"
+                  >Structuri repetitive</a
+                >
+                <ul class="sec_list">
+                  <li><a href="while.html" class="hover-3">while</a></li>
+                  <li>
+                    <a href="do_while.html" class="hover-3">do...while</a>
+                  </li>
+                  <li><a href="for.html" class="hover-3">for</a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+          <section class="section3">
+            <h2 id="h23">Algoritmi elementari</h2>
+            <ul>
+              <li>
+                <a href="interschimbarea.html" class="hover-3"
+                  >Interschimbarea</a
+                >
+              </li>
+              <li>
+                <a href="descompunere.html" class="hover-3"
+                  >Descompunerea în factorimi primi</a
+                >
+              </li>
+              <li>
+                <a href="verificare.html" class="hover-3"
+                  >Verificarea primalității</a
+                >
+              </li>
+            </ul>
+          </section>
+          <section class="section4">
+            <h2 id="h24">Algoritmi complecși</h2>
+            <ul>
+              <li><a href="binara.html" class="hover-3">Căutarea binară</a></li>
+              <li>
+                <a href="interclasare.html" class="hover-3">Interclasare</a>
+              </li>
+              <li>
+                <a href="recursivitate.html" class="hover-3">Recursivitate</a>
+              </li>
+              <li>
+                <a href="divide.html" class="hover-3">Divide et Impera</a>
+              </li>
+              <li>
+                <a href="backtracking.html" class="hover-3">Backtracking</a>
+              </li>
+              <li><a href="greedy.html" class="hover-3">Metoda Greedy</a></li>
+            </ul>
+          </section>
+        </div>
+        <div class="nav">
+          <p><a href="#h20" class="hover-3">Cuprins</a></p>
           <p><a href="#h21" class="hover-3">Elemente de bază</a></p>
           <p><a href="#h22" class="hover-3">Structuri de control</a></p>
           <p><a href="#h23" class="hover-3">Algoritmi elementari</a></p>
           <p><a href="#h24" class="hover-3">Algoritmi complecși</a></p>
+        </div>
       </div>
-       <div class="main-materie">
-          <section class="section1">
-            <h2 id="h21">Elemente de bază ale limbajului</h2>
-              <ul>
-               <li><a href="tipuri_de_date.html" class="hover-3">Tipuri de date C++</a></li>
-               <li><a href="variabile.html" class="hover-3">Variabile și constante C++</a></li>
-              </ul>
-            </section>
-            <section class="section2">
-            <h2 id="h22">Structuri de control</h2>
-            <ul>
-              <li><a href="structuri.html" class="hover-3">Structuri repetitive</a>
-                 <ul class="sec_list">
-                    <li><a href="while.html" class="hover-3">while</a></li>
-                    <li><a href="do_while.html" class="hover-3">do...while</a></li>
-                    <li><a href="for.html" class="hover-3">for</a></li>
-                 </ul>
-                </li>
-            </ul>
-            </section>
-            <section class="section3">
-            <h2 id="h23">Algoritmi elementari</h2>
-              <ul>
-                <li><a href="interschimbarea.html" class="hover-3">Interschimbarea</a></li>
-                 <li><a href="descompunere.html" class="hover-3">Descompunerea în factorimi primi</a></li>
-                 <li><a href="verificare.html" class="hover-3">Verificarea primalității</a></li>
-              </ul>
-          </section>
-          <section class="section4">
-            <h2 id="h24">Algoritmi complecși</h2>
-               <ul>
-                  <li><a href="binara.html" class="hover-3">Căutarea binară</a></li>
-                  <li><a href="interclasare.html" class="hover-3">Interclasare</a></li>
-                  <li><a href="recursivitate.html" class="hover-3">Recursivitate</a></li>
-                  <li><a href="divide.html" class="hover-3">Divide et Impera</a></li>
-                  <li><a href="backtracking.html" class="hover-3">Backtracking</a></li>
-                  <li><a href="greedy.html" class="hover-3">Metoda Greedy</a></li>
-               </ul>
-          </section>
-          <div style="margin-bottom:50px"></div>
-       </div>
-      </div>
-      <!----------------------->
-      <!-------Footer--------->
-    <div class="footer">
-        <div class="social">
-            <a href="https://www.instagram.com/david.blajan.5/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="snapcodeBitmoji.svg" target="_blank"><i class="fab fa-snapchat"></i></a>
-            <a href="https://github.com/Blaji123" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.facebook.com/david.blajan.5/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-          </div>
-          <ul class="list">
-            <li>
-              <a href="index.html">Acasă</a>
-            </li>
-            <li>
-              <a href="contact.html">Contact</a>
-            </li>
-            <li>
-              <a href="despre.html">Despre</a>
-            </li>
-          </ul>
+      <div style="padding-bottom: 50px"></div>
     </div>
     <!----------------------->
-</body>
+    <!-------Footer--------->
+    <div class="footer">
+      <div class="social">
+        <a href="https://www.instagram.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a href="https://github.com/Blaji123" target="_blank"
+          ><i class="fab fa-github"></i
+        ></a>
+        <a href="https://www.facebook.com/david.blajan.5/" target="_blank"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+      </div>
+      <ul class="list">
+        <li>
+          <a href="index.html">Acasă</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="despre.html">Despre</a>
+        </li>
+      </ul>
+    </div>
+    <!----------------------->
+  </body>
 </html>
